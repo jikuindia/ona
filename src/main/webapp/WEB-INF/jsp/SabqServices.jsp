@@ -1,0 +1,174 @@
+ <%@page contentType="text/html;charset=ISO-8859-1"%>
+ <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+ <link href="css/ticker-style.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.ticker.js" type="text/javascript"></script>
+<script src="js/site.js" type="text/javascript"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Welcome to Oman News Official Website</title>
+</head>
+<body>
+<div class="float_left topicsBlockLink12">
+
+ <div width="100%" style="padding:10px;">
+<!-- <div width="100%" class="urlbgLink1">  -->
+<table width=""100%>
+<tr width=100% height="20px">
+<td  width="100%" height="43" bgcolor="#0066FF">
+
+<div class="UrlNameLink3"><font face="Verdana" size="3" color="#FFFFFF">Sabaq services</font></div></div>
+<td>
+<tr>
+</table>
+</br>
+<!-- <p align="left" style="margin:0 10px; line-height:250%" dir="ltr">&nbsp;</p> -->
+<div class="UrlNameLink3" style="font-size:17px;"><spring:message code="label.smsNewsServices"/></div></div>
+<!-- <p align="left" style="margin:0 10px; line-height:320%" dir="ltr">&nbsp;</p> -->
+<div class="UrlNameLink5"><spring:message code="label.smsdis"/></div>
+
+<div class="urlbgLink1">
+<p align="left" style="margin:0 10px; line-height:250%" dir="ltr">&nbsp;</p> 
+<div class="UrlNameLink3"  style="font-size:17px;"><spring:message code="label.AboutTheservices"/></div></div>
+
+<p align="left" style="margin:0 10px; line-height:280%" dir="ltr">&nbsp;</p>
+<div class="UrlNameLink5"><spring:message code="label.aboutOfService"/></div>
+
+<div class="urlbgLink1">
+<p align="left" style="margin:0 10px; line-height:250%" dir="ltr">&nbsp;</p> 
+<div class="UrlNameLink3"  style="font-size:17px;"><spring:message code="label.logo"/></div></div>
+
+<p align="left" style="margin:0 10px; line-height:280%" dir="ltr">&nbsp;</p>
+<div class="UrlNameLink5"><spring:message code="label.logoDis"/></div><!-- </div> -->
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" bordercolor="red" style="border-collapse: collapse; border: medium none" dir="ltr" width="100%">
+          <tr>
+            <td width="93" valign="top" style="width: 60.6pt; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.servicetype"/></font></td>
+            <td width="160" valign="top" style="width: 140.2pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.serviceDetails"/></font></td>
+            <td width="96" valign="top" style="width: 72.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.noOfMSM"/></font>
+            </td>
+            <td width="95" valign="top" style="width: 71.4pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.monthlysubscription"/></font></p></td>
+            <td width="73" valign="top" style="width: 134.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.forSubscription"/></font></td>
+            <td width="73" valign="top" style="width: 124.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.tocancelSubscription"/></font></td>
+          </tr>
+          <tr>
+            <td width="93" valign="top" style="width: 69.6pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.breakingnews"/></font></td>
+            <td width="160" valign="top" style="width: 120.2pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.includeLocal"/></font></td>
+            <td width="96" valign="top" style="width: 72.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.moresms"/></font></td>
+            <td width="95" valign="top" style="width: 71.4pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><span style="font-size: 9pt">1.5 </span></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.breakingnews"/></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.CancelBreaking"/></font></td>
+          </tr>
+          <tr>
+            <td width="93" valign="top" style="width: 69.6pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.SportsNews"/></font></td>
+            <td width="160" valign="top" style="width: 120.2pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.Headlinesofthelocal"/></font></td>
+            <td width="96" valign="top" style="width: 72.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana">
+            <span style="font-size: 9pt">&nbsp;</span></font></td>
+            <td width="95" valign="top" style="width: 71.4pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana">
+            <span style="font-size: 9pt">1</span></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.SportsNews"/></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.CancelSports"/></font></td>
+          </tr>
+          <tr>
+            <td width="93" valign="top" style="width: 69.6pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.EconomicNews"/></font></td>
+            <td width="160" valign="top" style="width: 120.2pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.includeMajorFinace"/></font></td>
+            <td width="96" valign="top" style="width: 72.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana">
+            <span style="font-size: 9pt">&nbsp;</span></font></td>
+            <td width="95" valign="top" style="width: 71.4pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana">
+            <span style="font-size: 9pt">1</span></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.EconomicNews"/></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.CancelEconomic"/></font></td>
+          </tr>
+          <tr>
+            <td width="93" valign="top" style="width: 69.6pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.Miscellaneousevents"/></font>
+            </td>
+            <td width="160" valign="top" style="width: 120.2pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.inclideMedical"/></font></td>
+            <td width="96" valign="top" style="width: 72.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana">
+            <span style="font-size: 9pt">&nbsp;</span></font></td>
+            <td width="95" valign="top" style="width: 71.4pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana">
+            <span style="font-size: 9pt">1</span></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.Miscellaneousnews"/></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.CancelMiscellaneous"/></font></td>
+          </tr>
+          <tr>
+            <td width="93" valign="top" style="width: 69.6pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.Allpackages"/></font></td>
+            <td width="160" valign="top" style="width: 120.2pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.includesAllabove"/></font></td>
+            <td width="96" valign="top" style="width: 72.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.massageSent"/></font></td>
+            <td width="95" valign="top" style="width: 71.4pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana">
+            <span style="font-size: 9pt">3</span></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.Allpackages"/></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.cancelPackage"/></font></td>
+          </tr>
+          <tr>
+            <td width="93" valign="top" style="width: 69.6pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.PoliticalNews"/></font></td>
+            <td width="160" valign="top" style="width: 120.2pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.headlineMajor"/></font></td>
+            <td width="96" valign="top" style="width: 72.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.moreSms"/></font></td>
+            <td width="95" valign="top" style="width: 71.4pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana">
+            <span style="font-size: 9pt">1</span></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.PoliticalNews"/></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.CancelPolitical"/></font></td>
+          </tr>
+          <tr>
+            <td width="93" valign="top" style="width: 69.6pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.PerDemand"/></font></td>
+            <td width="160" valign="top" style="width: 120.2pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.AsPrLocal"/></font></td>
+            <td width="96" valign="top" style="width: 72.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.SMS"/></font></td>
+            <td width="95" valign="top" style="width: 71.4pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.baisesforeachSMS"/></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana"><spring:message code="label.sendtheword"/></font></td>
+            <td width="73" valign="top" style="width: 54.8pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
+            <p class="MsoNormal" align="left" dir="ltr"><font face="Verdana">
+            <span style="font-size: 9pt">- </span></font></td>
+          </tr>
+        </table>
+<p align="left" style="margin:0 10px; line-height:148%" dir="ltr">&nbsp;</p>
+<div class="UrlNameLink5"><spring:message code="label.moreInformation"/></div>
+<!-- </div> -->
+<!-- </div> -->
+</body>
+</html>

@@ -1,0 +1,149 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-2.0.xsd">
+
+ <!-- <aop:aspectj-autoproxy></aop:aspectj-autoproxy> -->
+  <!-- <annotation-driven /> -->
+	<context:annotation-config />
+	<context:component-scan base-package="com.insync.controller" />
+	<!-- <bean id="viewResolver"
+    	      class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+              <property name="prefix">
+                  <value>/WEB-INF/jsp/</value>
+               </property>
+              <property name="suffix">
+                 <value>.jsp</value>
+              </property>
+        </bean> -->
+	<!-- <bean id="multipartResolver"
+  class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+	<bean id="viewResolver"  
+        class="org.springframework.web.servlet.view.UrlBasedViewResolver">  
+        <property name="viewClass">  
+            <value>  
+                org.springframework.web.servlet.view.tiles2.TilesView  
+        </value>  
+        </property>  
+    </bean>    
+ 
+	 <bean id="tilesConfigurer"
+    class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+    <property name="definitions">
+        <list>
+            <value>/WEB-INF/tiles-defs.xml</value>
+        </list>
+    </property>
+</bean>
+<bean id="messageSource"
+class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+<property name="basename" value="classpath:messages" />
+<property name="defaultEncoding" value="UTF-8" />
+</bean>
+<bean id="localeChangeInterceptor"
+class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+<property name="paramName" value="lang" />
+</bean>
+<bean id="localeResolver"
+class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />
+
+<bean id="handlerMapping"
+class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+<property name="interceptors">
+<ref bean="localeChangeInterceptor" />
+</property>
+</bean> -->
+ 	<!-- <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+			<value>java:comp/env/jdbc/ona2</value>
+		</property>
+		<property name="resourceRef">
+			<value>true</value>
+		</property>
+	</bean> -->
+	
+	
+	<bean id="dataSource"
+
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+		<property name="driverClassName">
+
+			<value>oracle.jdbc.driver.OracleDriver</value>
+
+		</property>
+
+		<property name="url">
+
+			<value>jdbc:oracle:thin:@localhost:1521:xe</value>
+
+		</property>
+
+		<property name="username">
+
+			<value>ona2</value>
+
+		</property>
+
+		<property name="password">
+
+			<value>ona2</value>
+
+		</property>
+
+	</bean>
+	
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="loginService" class="com.insync.service.LoginServiceImpl"></bean>
+	<bean id="loginDao" class="com.insync.dao.LoginDaoImpl">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	
+	<bean id="adminEditService" class="com.insync.service.AdminEditServiceImpl"></bean>
+	<bean id="adminEditDao" class="com.insync.dao.AdminEditDaoImpl">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<bean id="userEditService" class="com.insync.service.UserEditServiceImpl"></bean>
+	<bean id="userEditDao" class="com.insync.dao.UserEditDaoImpl">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<dwr:configuration >
+       <dwr:convert type="bean" class="com.insync.model.NewsTitleCommand"></dwr:convert>
+</dwr:configuration>
+
+<bean id="dwrService" class="com.insync.service.DwrServiceImpl">
+<dwr:remote javascript="dwrService">
+</dwr:remote>
+</bean>
+<bean id="userDao" class="com.insync.dao.UserDaoImpl">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+</beans>

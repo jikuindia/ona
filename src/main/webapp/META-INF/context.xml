@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!--   <WatchedResource>WEB-INF/web.xml</WatchedResource> -->
+<Context>
+<Resource name="jdbc/ona2" auth="Container" type="javax.sql.DataSource"
+                maxActive="100" maxIdle="30" maxWait="10000"
+                username="ona2" password="ona2" driverClassName="oracle.jdbc.driver.OracleDriver"
+               url="jdbc:oracle:thin:@localhost:1521:xe"/>
+
+    
+
+</Context>

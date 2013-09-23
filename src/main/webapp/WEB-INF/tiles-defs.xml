@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<!-- user layout -->
+	<definition name="baseLayout" template="/WEB-INF/tiles/baseLayout.jsp" >
+		<put-attribute name="title" value="Template" />
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles/loginMenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/tiles/body.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+
+	<definition name="index" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+	</definition>
+	<definition name="failure" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/failure.jsp" />
+	</definition>
+	<definition name="success" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/success.jsp" />
+	</definition>
+
+	<definition name="mailFailure" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/mailFailure.jsp" />
+	</definition>
+
+
+	<definition name="mailSuccess" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/mailSuccess.jsp" />
+	</definition>
+
+	<!-- Admin login layout -->
+
+	<definition name="adminLayout" template="/WEB-INF/tiles/adminLayout.jsp">
+		<put-attribute name="title" value="Template" />
+		<put-attribute name="adminHeader" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="adminMenu" value="/WEB-INF/tiles/adminMenu.jsp" />
+		<put-attribute name="adminBody" value="/WEB-INF/tiles/body.jsp" />
+		<put-attribute name="adminFooter" value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+
+	<!-- <definition name="adminSuccess" extends="adminLayout"> <put-attribute 
+		name="title" value="Welcome"/> <put-attribute name="adminBody" value="/WEB-INF/jsp/adminLogin.jsp"/> 
+		</definition> -->
+	<definition name="ifthaar" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/ifthaarADM.jsp" />
+	</definition>
+
+	<definition name="pictureAdd" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/pictAddADM.jsp" />
+	</definition>
+
+	<definition name="changePassword" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/changePasswordADM.jsp" />
+	</definition>
+
+	<definition name="updateWeather" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/currUpdateADM.jsp" />
+	</definition>
+
+	<definition name="newsDisplay" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/newsDisplay.jsp" />
+	</definition>
+
+	<definition name="displayTitle" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/newsDisplay.jsp" />
+	</definition>
+	<definition name="passSuccess" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/passwordSuccess.jsp" />
+	</definition>
+
+
+	<definition name="newsAdd" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/newsAdd.jsp" />
+	</definition>
+
+	<definition name="passSuccess" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/passwordSuccess.jsp" />
+	</definition>
+
+
+	<definition name="fileUpload" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/multiFileUpload.jsp" />
+	</definition>
+
+	<definition name="adminSuccess" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/ifhaarSuccess.jsp" />
+	</definition>
+
+	<definition name="failureAdmin" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/failureAdmin.jsp" />
+	</definition>
+
+	<definition name="fileSuccess" extends="adminLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/fileSuccess.jsp" />
+	</definition>
+	<!-- login layout -->
+
+	<definition name="loginLayout" template="/WEB-INF/tiles/loginLayout.jsp">
+		<put-attribute name="title" value="Template" />
+		<put-attribute name="loginHeader" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="loginBody" value="/WEB-INF/tiles/body.jsp" />
+		<put-attribute name="loginFooter" value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+
+	<definition name="indexAdmin" extends="loginLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="loginBody" value="/WEB-INF/jsp/loginAdmin.jsp" />
+	</definition>
+
+	<definition name="contectUs" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/contect_Us.jsp" />
+	</definition>
+
+	<definition name="geoLocation" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/GeographicLocation.jsp" />
+	</definition>
+
+	<definition name="ona" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/ONA.jsp" />
+	</definition>
+
+	<definition name="nFlag" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/NationalFlag.jsp" />
+	</definition>
+
+
+	<definition name="basicInformation" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/BasicInformation_Of_Oman.jsp" />
+	</definition>
+	<definition name="rss" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/Rss.jsp" />
+	</definition>
+	<definition name="sabq" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/SabqServices.jsp" />
+	</definition>
+	<definition name="ftp" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/FTP.jsp" />
+	</definition>
+	
+	<definition name="photoGallery" template="/WEB-INF/jsp/photoGallery.jsp" >
+		<put-attribute name="title" value="photoGallery" />
+	</definition>
+</tiles-definitions>
