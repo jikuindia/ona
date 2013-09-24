@@ -82,7 +82,6 @@
 
    $(function(){
 	   
-	 //  $('#subscribemodaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
 	   $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
 	 });
    
@@ -134,22 +133,8 @@
         );
     });
  
- /* function subscribeMail(sub) {
 
-	 if(sub==""){
-	 alert("Please Enter Email Id.." );
-	 }else{
-
-	 dwrService.getSubscribe(sub,function(){
-	 document.getElementById('message1').innerHTML=" you have subscribed news sucessfully";
-
-	 });
-
-	 /* alert("dD"); */
-
-	 }}
- 
- */ </script>
+ </script>
     
  
 
