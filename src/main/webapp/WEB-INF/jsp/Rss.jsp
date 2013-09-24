@@ -11,17 +11,12 @@
 </head>
 <body>
 <div class="float_left topicsBlockLink2">
+<div width="100%" style="padding:10px;"> 
+<table width=100%>
 
-<!-- <div style="padding:10px;">
-<div class="urlbgLink1"> -->
-<!-- <p align="left" style="margin:0 10px; line-height:100%" dir="ltr">&nbsp;</p> -->
-<table width=""100%>
-<tr width=100% height="20px">
-<td  width="100%" height="47" bgcolor="#0066FF">
-
-<div class="UrlNameLink3"><font face="Verdana" size="3" color="#FFFFFF"><spring:message code="label.rssServices"/></font></div></div>
-<td>
 <tr>
+			<td class="style12" valign="middle">&nbsp;<spring:message
+					code="label.rssServices" /></td></tr>
 </table>
 
 <div></br></div>
@@ -51,7 +46,7 @@
 <div class="UrlNameLink3"><spring:message code="label.generalNews"/></div>
 </div>
 
-<!-- </div>
-</div> -->
+</div>
+</div>
 </body>
 </html>

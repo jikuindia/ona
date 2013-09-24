@@ -1,5 +1,6 @@
 package com.insync.service;
 
+import java.io.IOException;
 import java.util.List;
 
 import com.insync.model.NewsAddCommand;

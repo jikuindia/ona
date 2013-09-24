@@ -23,7 +23,7 @@ function getNewsDesc(newsId)
 		  document.getElementById("newsDetail").style.display="none";
 			  document.getElementById("newsText").innerHTML="";
 		  
-	  document.getElementById("newsText").innerHTML="<table border='0'><tr><td><a class='flatbtn' onclick='showNewsDetail()'>Back</a></td><td><div class='welcomeText'><u>"+data.newsTitle+"</u></div><td></tr></table><div class='welcomeText'>"+data.mainDesc+"</div>";
+	  document.getElementById("newsText").innerHTML="<table border='0'><tr><td><div class='welcomeText'><u>"+data.newsTitle+"</u></div><td></tr></table><div class='welcomeText'>"+data.mainDesc+"</div>";
 	  });
 }
 

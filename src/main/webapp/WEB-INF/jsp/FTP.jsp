@@ -1,8 +1,6 @@
  <%@page contentType="text/html;charset=ISO-8859-1"%>
  <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
  <link href="css/ticker-style.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery.ticker.js" type="text/javascript"></script>
-<script src="js/site.js" type="text/javascript"></script>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,12 +11,12 @@
 <div class="float_left" style="width:999px; background:#d9eff9; height:410px; border-radius: 10px 10px 10px 10px; margin-right:10px;">
 
 <!-- <div style="padding:10px;width=100%">
-<div width="100%"class="urlbgLink1"> -->
-<table width=""100%>
-<tr width=100% height="20px">
-<td  width="100%" height="48" bgcolor="#0066FF">
-
-<div class="UrlNameLink3"><font face="Verdana" size="3" color="#FFFFFF"><spring:message code="label.FTPService"/></font></div></div>
+<div width="100%"class="urlbgLink1">-->
+<table width=73%>
+<!-- <tr width=100% height="20px">
+<td  width="100%" height="48" bgcolor="#0066FF"> -->
+<tr><td>
+<div class="style12"><font face="Verdana" size="3" color="#FFFFFF"><spring:message code="label.FTPService"/></font></div></div>
 <td>
 <tr>
 </table>

@@ -12,20 +12,15 @@
 <body>
 <div class="float_left topicsBlockLink12">
 
- <div width="100%" style="padding:10px;">
-<!-- <div width="100%" class="urlbgLink1">  -->
-<table width=""100%>
-<tr width=100% height="20px">
-<td  width="100%" height="43" bgcolor="#0066FF">
-
-<div class="UrlNameLink3"><font face="Verdana" size="3" color="#FFFFFF">Sabaq services</font></div></div>
-<td>
+ <div width="100%" style="padding:10px;"> 
+<table width=100%>
 <tr>
+			<td class="style12" valign="middle">&nbsp;<spring:message
+					code="label.sabaqservices" /></td></tr>
 </table>
-</br>
-<!-- <p align="left" style="margin:0 10px; line-height:250%" dir="ltr">&nbsp;</p> -->
-<div class="UrlNameLink3" style="font-size:17px;"><spring:message code="label.smsNewsServices"/></div></div>
-<!-- <p align="left" style="margin:0 10px; line-height:320%" dir="ltr">&nbsp;</p> -->
+<br>
+
+<div class="UrlNameLink3" style="font-size:17px;"><spring:message code="label.smsNewsServices"/></div>
 <div class="UrlNameLink5"><spring:message code="label.smsdis"/></div>
 
 <div class="urlbgLink1">
@@ -40,7 +35,7 @@
 <div class="UrlNameLink3"  style="font-size:17px;"><spring:message code="label.logo"/></div></div>
 
 <p align="left" style="margin:0 10px; line-height:280%" dir="ltr">&nbsp;</p>
-<div class="UrlNameLink5"><spring:message code="label.logoDis"/></div><!-- </div> -->
+<div class="UrlNameLink5"><spring:message code="label.logoDis"/></div>
 <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" bordercolor="red" style="border-collapse: collapse; border: medium none" dir="ltr" width="100%">
           <tr>
             <td width="93" valign="top" style="width: 60.6pt; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" dir="ltr">
@@ -169,6 +164,6 @@
 <p align="left" style="margin:0 10px; line-height:148%" dir="ltr">&nbsp;</p>
 <div class="UrlNameLink5"><spring:message code="label.moreInformation"/></div>
 <!-- </div> -->
-<!-- </div> -->
+ </div> 
 </body>
 </html>

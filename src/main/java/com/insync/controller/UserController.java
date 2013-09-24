@@ -109,4 +109,9 @@ public class UserController {
 	public String photoGallery(){
 	return "photoGallery";
 	}
+	@RequestMapping(value = "/map")
+	public String mapPage(){
+	return "map";
+	}
+
 }

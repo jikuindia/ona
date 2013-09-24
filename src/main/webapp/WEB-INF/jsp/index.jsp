@@ -46,7 +46,9 @@
   
   <script class="include" type="text/javascript" src="graph/plugins/jqplot.canvasTextRenderer.min.js"></script>
   <script class="include" type="text/javascript" src="graph/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
-  
+  <!-- sports slider.. -->
+   <link href="themes2/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+<script src="themes2/1/js-image-slider.js" type="text/javascript"></script>
   
   <!-- zooming pic -->
   <script type="text/javascript" src="highslide/highslide-with-html.js"></script>
@@ -80,8 +82,7 @@
 
    $(function(){
 	   
-	   $('#subscribemodaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
-		
+	 //  $('#subscribemodaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
 	   $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
 	 });
    
@@ -133,7 +134,7 @@
         );
     });
  
- function subscribeMail(sub) {
+ /* function subscribeMail(sub) {
 
 	 if(sub==""){
 	 alert("Please Enter Email Id.." );
@@ -147,7 +148,8 @@
 	 /* alert("dD"); */
 
 	 }}
- </script>
+ 
+ */ </script>
     
  
 
@@ -227,32 +229,9 @@ $(document).ready(function () {
 <tr>
 <td>
 <div class="float_left welcomeBolck">
-<table><tr><td><div class="welcomeText">Latest News</div></td>
-
-<td>
-<a href="#subscribemodal" class="flatbtn" id="subscribemodaltrigger">Subscribe</a>
-<div id="subscribemodal" style="display:none;">
-
-<form id="subform" name="subform" method="post" action="#">
-
-<table class="fontformodalcontrol" width="100%" align="center" border="0">
-<tr>
-<td align="left" valign="bottom">
-<label for="email"><spring:message code="label.email"/></label></td><td>
-<input type="text" name="email" id="email" size="40"/>&nbsp;</td>
-</tr>
-<tr>
-<td colspan="2" align="center">
-<input type="button" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="<spring:message code="label.submit"/>" onclick="subscribeMail(email.value)" tabindex="3" />
-
-</td>
-</tr>
-
-</table>
-</form>
-
-</div>
-</td><td valign="top"><div id=message1 class="text"></div></td></tr></table>
+<table width="100%"><tr><td><div class="welcomeText">Latest News</div></td>
+<td align="right"><a class='flatbtn' onclick='showNewsDetail()'>Back</a></td>
+</tr></table>
 
 
 <div class="text" id="newsDetail" style="height:250px;overflow: scroll;overflow-x:hidden " >
@@ -563,9 +542,19 @@ $(document).ready(function () {
 </div>
 <!--vvvvv-->
 <div class="float_left priceBlock">
-<img src="images/omanSports.png" />
+<div id="sliderFrame">
+<div id="sportslider">
+
+<a target="_blank" href="http://www.royalhospital.med.om/"><img src="sportsImages/image-slider-1.jpg" /></a>
+<a target="_blank" href="http://www.aei.org.om/"><img src="sportsImages/image-slider-2.jpg" /></a>
+<a target="_blank" href="http://www.youthfund.com/"><img src="sportsImages/image-slider-3.jpg" /></a>
+<a target="_blank" href="http://www.chamberoman.com/"><img src="sportsImages/image-slider-4.jpg" /></a>
+<!-- <a target="_blank" href="http://www.salalahport.com/"><img src="sportsImages/image-slider-5.jpg" /></a> -->
+</div>
+</div>
 
 </div>
+
 
 
 </div>

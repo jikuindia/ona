@@ -28,9 +28,20 @@
 </style>
 <script type="text/javascript">
 	function getPhotos() {
+
 		var date1 = document.getElementById("fromdate").value;
 		var date2 = document.getElementById("todate").value;
-
+		     if(date1==""){
+				  document.getElementById('message2').innerHTML="Please Enter From Date !!"; 
+				  
+		     }
+		     
+		    else if(date2==""){
+		    	document.getElementById('message3').innerHTML="Please Enter To Date !!";
+		    
+		    }else{
+		    	document.getElementById('message2').innerHTML="";
+		    	document.getElementById('message3').innerHTML="";
 		dwrService
 				.getPhoto(
 						date1,
@@ -71,10 +82,10 @@
 								dwr.util.byId("photopattern" + id).style.display = ""; // officially we should use table-row, but IE prefers "" for some reason
 
 							}
-
+					
 						});
 	}
-	
+	}
 	
 		$(function() {
 			$( "#todate" ).datepicker({
@@ -105,7 +116,9 @@
 	<form id="loginform" name="loginform" method="post" action="#">
 
 		<table width="60%"  align="center" border="0" >
-			<tr valign="middle">
+		  <tr valign="middle"><td>&nbsp;</td>
+       <td><div id=message2 class="text" align="left"></div></td><td></td><td><div id=message3 class="text" align="left"></div></td></tr>
+			<tr valign="middle">			
 				<td ><label for="fromdate"><spring:message
 							code="label.fdate" /></label></td><td > <input type="text" name="fromdate"
 					id="fromdate"  /></td>

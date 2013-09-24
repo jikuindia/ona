@@ -11,20 +11,18 @@ pageEncoding="ISO-8859-1"%>
 <div class="menuBlock">
 <div class="manuLeftBg float_left"></div>
 <div class="menuBg float_left">
-<div class="float_left"><div class="menuText"><a href="/ona/process.html"><spring:message code="label.HomePage"/></a></div></div>
+<div class="float_left"><div class="menuText"><a class="menuText" href="/ona/process.html"><spring:message code="label.HomePage"/></a></div></div>
+ <div class="menuSeperator float_left"></div> 
+<div class="float_left"><div class="menuText"><a class="menuText" href="/ona/eONA.html"><spring:message code="label.AboutUs"/></a></div></div>
 <div class="menuSeperator float_left"></div>
-<div class="float_left"><div class="menuText"><a href="/ona/eONA.html"><spring:message code="label.AboutUs"/></a></div></div>
+<div class="float_left"><div class="menuText"><a class="menuText" href="/ona/eBasicInformation.html"><spring:message code="label.BasicInfo"/></a></div></div>
 <div class="menuSeperator float_left"></div>
-<div class="float_left"><div class="menuText"><a href="/ona/eBasicInformation.html"><spring:message code="label.BasicInfo"/></a></div></div>
+<div class="float_left"><div class="menuText"><a class="menuText" href="/ona/eGeoGraphicLoc.html"><spring:message code="label.Glocation"/></a></div></div>
 <div class="menuSeperator float_left"></div>
-<div class="float_left"><div class="menuText"><a href="/ona/eGeoGraphicLoc.html"><spring:message code="label.Glocation"/></a></div></div>
+<div class="float_left"><div class="menuText"><a class="menuText"href="/ona/eNationalFlag.html"><spring:message code="label.nationalFlag"/></a></div></div>
 <div class="menuSeperator float_left"></div>
-<div class="float_left"><div class="menuText"><a href="/ona/eNationalFlag.html"><spring:message code="label.nationalFlag"/></a></div></div>
+<div class="float_left"><div class="menuText"><a class="menuText"href="/ona/eContectUs.html"><spring:message code="label.contact"/></a></div></div>
 <div class="menuSeperator float_left"></div>
-
-<div class="float_left"><div class="menuText"><spring:message code="label.feedback"/></div></div>
-<div class="menuSeperator float_left"></div>
-<div class="float_left"><div class="menuText"><a href="/ona/eContectUs.html"><spring:message code="label.contact"/></a></div></div>
 </div>
 <div class="menuRightBg float_left"></div>
 </div>
