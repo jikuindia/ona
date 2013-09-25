@@ -19,7 +19,8 @@ public interface QueryConstant {
 	String updateNewENG="update INTERNET_NEWS_ENG set TITLE=?, NEWS_STATUS=?,HOME_DISPLAY=?,HOME_DESC=?,MAIN_DESC=?,NEWS_DATE=?,NEWS_CAT=? where SR_NO=?";
 	String updateNewARB="update INTERNET_NEWS set TITLE=?, NEWS_STATUS=?,HOME_DISPLAY=?,HOME_DESC=?,MAIN_DESC=?,NEWS_DATE=?,NEWS_CAT=? where SR_NO=?";
 	String storeEmail="INSERT INTO ONA2.INTERNET_SUBSCRIBER(EMAIL) VALUES(?)";
-
+	String getCountry="SELECT COUNTRY,OILPRICE FROM INTERNET_OILPRICE";
+	String storeOil="INSERT INTO INTERNET_OILPRICE(ID,COUNTRY,OILPRICE) VALUES(?,?,?)";
 	
 	String getTitleEng="select SR_NO,TITLE from ONA2.INTERNET_NEWS_ENG where NEWS_DATE=to_date(?,'mm-dd-yyyy')";
 	String getTitleAra="select SR_NO,TITLE from ONA2.INTERNET_NEWS where NEWS_DATE=to_date(?,'mm-dd-yyyy')";

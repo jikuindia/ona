@@ -41,7 +41,7 @@ border-style:none;}
 <div class="menuSeperator float_left"></div>
 <div class="float_left"><div class="menuText"><a href="/ona/ifthaar.html">Ifthaar</a></div></div>
 <div class="menuSeperator float_left"></div>
-<div class="float_left"><div class="menuText"><a href="/ona/currentUpdate.html">Manage Currency/Oil Price/Weather</a></div></div>
+<div class="float_left"><div class="menuText"><a href="/ona/addOilPrice.html">Oil Price</a></div></div>
 <div class="menuSeperator float_left"></div>
 <div class="float_left"><div class="menuText"><a href="/ona/multiShow.html">Add Picture</a></div></div>
 <div class="menuSeperator float_left"></div>

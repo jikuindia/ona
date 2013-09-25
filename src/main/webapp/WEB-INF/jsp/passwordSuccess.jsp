@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
 <meta http-equiv="Content-Language" content="en-us">
@@ -54,7 +56,7 @@ function remove(space)
 </head>
 
 <body topmargin="0" leftmargin="0" bgcolor="#FFFFFF" ><center>
-<center><h5>SuccessFully Password Changed</h5></center>
+<center><h5>${password}</h5></center>
 
 <form name="login1" action="sendPassword.html" method="post" target="frm">
 		   

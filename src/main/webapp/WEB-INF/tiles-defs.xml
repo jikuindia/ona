@@ -104,14 +104,10 @@
 
 	<definition name="adminSuccess" extends="adminLayout">
 		<put-attribute name="title" value="Welcome" />
-		<put-attribute name="adminBody" value="/WEB-INF/jsp/ifhaarSuccess.jsp" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/adminSuccess.jsp" />
 	</definition>
 
-	<definition name="failureAdmin" extends="adminLayout">
-		<put-attribute name="title" value="Welcome" />
-		<put-attribute name="adminBody" value="/WEB-INF/jsp/failureAdmin.jsp" />
-	</definition>
-
+	
 	<definition name="fileSuccess" extends="adminLayout">
 		<put-attribute name="title" value="Welcome" />
 		<put-attribute name="adminBody" value="/WEB-INF/jsp/fileSuccess.jsp" />
@@ -128,7 +124,15 @@
 	<definition name="indexAdmin" extends="loginLayout">
 		<put-attribute name="title" value="Welcome" />
 		<put-attribute name="loginBody" value="/WEB-INF/jsp/loginAdmin.jsp" />
+		</definition>
+
+<definition name="failureAdmin" extends="loginLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="adminBody" value="/WEB-INF/jsp/loginAdmin.jsp" />
 	</definition>
+
+
+
 
 	<definition name="contectUs" extends="baseLayout">
 		<put-attribute name="title" value="Welcome" />

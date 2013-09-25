@@ -140,7 +140,7 @@ document.login.userName.focus();
 
 </style>
 </head>
-
+<center><h3>${result}</h3></center>
 <body onLoad="fnc()" topmargin="0" leftmargin="0" bgcolor="#FFFFFF" >
 
 <table border="0" width="100%" id="table1">
@@ -151,7 +151,7 @@ document.login.userName.focus();
 		&nbsp;
 		
 		<div align="center">
-		<table border="1" width="48%" id="table4" cellspacing="0" cellpadding="0" bordercolor="#FF9966">
+		<table border="1" width="48%" id="table4" cellspacing="0" cellpadding="0" bordercolor="#E5EEF9">
 			<tr>
 				<td>
 				<form name="login" id="login" action="send.html" modelAttribute="loginPage" method="post">

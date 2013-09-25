@@ -2,10 +2,9 @@ package com.insync.controller;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Properties;
 
@@ -36,6 +35,7 @@ public class FileUploadController {
 	public String save(
 			@ModelAttribute("uploadForm") FileUploadCommand uploadForm,
 			Model map) {
+		String folder=uploadForm.getPicture();
 		List<MultipartFile> files = uploadForm.getFiles();
 
 		List<String> fileNames = new ArrayList<String>();
@@ -46,37 +46,58 @@ public class FileUploadController {
 					.getResourceAsStream("imagepth.properties"));
 			String saveDirectory = prop.getProperty("imagePath");
 
-			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-			Date date = new Date();
-			String dName = dateFormat.format(date);
-
+			Calendar cal = new GregorianCalendar();
+			String dt = "";
+			int year = cal.get(Calendar.YEAR);
+			int month = cal.get(Calendar.MONTH) + 1;
+			int day = cal.get(Calendar.DAY_OF_MONTH);
+			dt = "" + day + "" + month + "" + year;
+			
+			if("M".equals(folder)){
+			String pict=saveDirectory+dt+"/mainpic/";
+			File path=new File(pict);
+			path.mkdirs();
+			path.createNewFile();
+			
 			if (null != files && files.size() > 0) {
 				for (MultipartFile multipartFile : files) {
 
 					String fileName = multipartFile.getOriginalFilename();
-
-					String fName = "(";
-					String lName = ")";
-					String jName = ".jpg";
-
-					String finalName = fName + dName + lName + count + "A"
-							+ jName;
-					fileName = finalName;
-					count++;
-					fileNames.add(fileName);
-
 					if (!multipartFile.getOriginalFilename().equals("")) {
-						multipartFile.transferTo(new File(saveDirectory
+						multipartFile.transferTo(new File(pict
 								+ fileName));
 					}
 
 				}
 			}
+			}else{
+				
+				String pict=saveDirectory+dt+"/subpic/";
+				File path=new File(pict);
+				path.mkdirs();
+				path.createNewFile();
+				
+				if (null != files && files.size() > 0) {
+					for (MultipartFile multipartFile : files) {
+
+						String fileName = multipartFile.getOriginalFilename();
+						if (!multipartFile.getOriginalFilename().equals("")) {
+							multipartFile.transferTo(new File(pict
+									+ fileName));
+						}
+
+					}
+				
+			}
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
+			String messagePhoto="Sorry to upload...";
+			map.addAttribute("messagePhoto", messagePhoto);
 		}
-		int flag = adminEditService.storeImage(fileNames);
-		map.addAttribute("files", fileNames);
-		return "fileSuccess";
+			String messagePhoto="Successfully picture uploaded";
+			map.addAttribute("messagePhoto", messagePhoto);
+		
+		return "fileUpload";
 	}
 }

@@ -6,7 +6,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <title>Welcome to ONA</title>
 <script language="javascript">
 function validate()
@@ -92,50 +91,77 @@ document.login.userName.focus();
 }
  }
 </script>
+<style>
+.myButton {
+        
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
+        background:-moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
+        background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
+        background:-o-linear-gradient(top, #79bbff 5%, #378de5 100%);
+        background:-ms-linear-gradient(top, #79bbff 5%, #378de5 100%);
+        background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
+        
+        background-color:#79bbff;
+        
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+        
+        border:1px solid #337bc4;
+        
+        display:inline-block;
+        color:#ffffff;
+        font-family:arial;
+        font-size:10px;
+        font-weight:bold;
+        padding:3px 8px;
+        text-decoration:none;
+        
+        text-shadow:0px 1px 0px #528ecc;
+        
+    }
+    .myButton:hover {
+        
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+        background:-moz-linear-gradient(top, #378de5 5%, #79bbff 100%);
+        background:-webkit-linear-gradient(top, #378de5 5%, #79bbff 100%);
+        background:-o-linear-gradient(top, #378de5 5%, #79bbff 100%);
+        background:-ms-linear-gradient(top, #378de5 5%, #79bbff 100%);
+        background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+        
+        background-color:#378de5;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+
+</style>
 </head>
 
 <body onLoad="fnc()" topmargin="0" leftmargin="0" bgcolor="#FFFFFF" >
-<center><h5>Invalid password or user name</h5></center>
-
+<h4>Invalid password or username</h4>
 <table border="0" width="100%" id="table1">
 	
 	<tr>
-		<td width="182" bgcolor="#EFF3FF" valign="top">
-		<table border="0" width="182" cellspacing="0" cellpadding="0" id="table2">
-			<tr>
-				<td width="182">
-				<br>
-				<br>
-				</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-			</tr>
-		</table>
-		</td>
+		
 		<td width="95%" bgcolor="#FFFFFF" valign="top">
-		&nbsp;<p>&nbsp;</p>
-		<p>
-		<br>
-		</p>
+		&nbsp;
+		
 		<div align="center">
 		<table border="1" width="48%" id="table4" cellspacing="0" cellpadding="0" bordercolor="#E5EEF9">
 			<tr>
 				<td>
 				<form name="login" id="login" action="send.html" modelAttribute="loginPage" method="post">
 				<table border="0" width="100%" id="table5">
-					<tr>
-						<td colspan="2" bgcolor="#1C837C">
+					<tr bgcolor="#0066FF">
+						<td height="28" colspan="2">
 						<p style="margin-left: 10px"><b>
 						<font face="Verdana" size="2" color="#FFFFFF">
-						Administrator Login...</font></b></td>
-					</tr>
+					  Administrator Login...</font></b></td>
+				  </tr>
 					<tr>
 						<td width="32%" height="30">
 						<p style="margin-left: 20px"><b>
@@ -153,8 +179,8 @@ document.login.userName.focus();
 					<tr>
 						<td width="32%">&nbsp;</td>
 						<td width="65%" height="40">
-						<input type="submit" value="Login"  onclick="return validate()">&nbsp;
-						<input type="reset" value="Clear" ></td>
+						<input type="submit" class="myButton"value="Login"  onclick="return validate()">&nbsp;
+						<input type="reset" class="myButton"value="Clear" ></td>
 					</tr>
 				</table></form>
 				</td>

@@ -5,7 +5,17 @@ import java.util.List;
 import org.springframework.web.multipart.MultipartFile;
 
 public class FileUploadCommand {
-	 public List<MultipartFile> getFiles() {
+	private String picture;
+
+	public String getPicture() {
+		return picture;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
+
+	public List<MultipartFile> getFiles() {
 		return files;
 	}
 

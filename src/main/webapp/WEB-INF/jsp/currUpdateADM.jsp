@@ -1,91 +1,90 @@
- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=cp1256">
-<title>Manage currency /oil price</title>
-
-<script language="javascript" type="text/javascript" src="Editor/jscripts/tiny_mce/tiny_mce.js"></script>
-<script language="javascript" type="text/javascript">
-	tinyMCE.init({
-		mode : "textareas",
-		theme : "advanced",
-		plugins : "style,layer,table,save,advhr,advimage,advlink,emotions,iespell,insertdatetime,preview,flash,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable",
-		theme_advanced_buttons1_add_before : "save,newdocument,separator",
-		theme_advanced_buttons1_add : "fontselect,fontsizeselect",
-		theme_advanced_buttons2_add : "separator,insertdate,inserttime,preview,separator,forecolor,backcolor",
-		theme_advanced_buttons2_add_before: "cut,copy,paste,pastetext,pasteword,separator,search,replace,separator",
-		theme_advanced_buttons3_add_before : "tablecontrols,separator",
-		theme_advanced_buttons3_add : "emotions,iespell,flash,advhr,separator,print,separator,ltr,rtl,separator,fullscreen",
-		theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops",
-		theme_advanced_toolbar_location : "top",
-		theme_advanced_toolbar_align : "left",
-		theme_advanced_path_location : "bottom",
-		content_css : "Editor/jscripts/main.css",
-	    plugin_insertdate_dateFormat : "%Y-%m-%d",
-	    plugin_insertdate_timeFormat : "%H:%M:%S",
-		extended_valid_elements : "hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]",
-		external_link_list_url : "Editor/link_list.js",
-		external_image_list_url : "Editor/image_list.js",
-		flash_external_list_url : "Editor/flash_list.js",
-		file_browser_callback : "fileBrowserCallBack",
-		theme_advanced_resize_horizontal : false,
-		theme_advanced_resizing : true
-	});
-
-	function fileBrowserCallBack(field_name, url, type, win) {
-		// This is where you insert your custom filebrowser logic
-		//alert("Filebrowser callback: field_name: " + field_name + ", url: " + url + ", type: " + type);
-
-		// Insert new URL, this would normaly be done in a popup
-		win.document.forms[0].elements[field_name].value = "blank.jsp";
-	}
-</script>
-<!-- /TinyMCE -->
-
-
-<style>
-td{font-family:Tahoma;font-size:11px;color:#000000;}
-.txt{padding-left:15px;padding-right:15px;padding-top:5px;}
-.date{font-weight:bold;font-size:10px;color:#A7A7A7;}
-.cap{font-weight:bold;color:#2E688E;padding-left:5px;padding-top:4px;padding-bottom:3px;}
-</style>
-<style type="text/css">
-  div.calendar_widget { position: absolute; top: 0px; left: 0px; width:140px; height: 200px; display: none; }
-</style>
-<style type="text/css">
-  div.downloadlist { float:right; border: 1px; background-color: e0e0ff; padding: 4px; border-style: outset; }
-  div.downloadlist ul { list-style: none; margin: 4px; }
-</style>
-
-<script type="text/javascript" src="js/date-picker.js"></script>
-
-
-<script language="javascript">
-function validate()
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ <HTML>
+<HEAD>
+<script type="text/javascript">
+function fileValidate(){
+	  valid = true;
+	  var pict=document.form1.picture.options[document.form1.picture.selectedIndex].value
+alert("hi");
+if ( document.form1.files.value == "" )
 {
-
-
-var a =document.pressed;
-document.getElementById("myform").action = a;
-return true;
-
+    alert ( "please select picture." );
+    valid = false;
+}
+else if(pict=="0" )
+{
+	 alert ( "please select folder." );
+	    valid = false;
+}
+alert("bye")
+return valid; 	
 }
 
-
-function remove(space)
-{
-	var plus = 0;
-	for(var i=0;i<space.length;i++)
-	{
-		if (space.charAt(i) != ' ')
-		{
-			plus =plus + 1;
-		}
-	}
-	return(plus);
-}
 </script>
-<style>
+    <SCRIPT language="javascript">
+        function addRow(tableID) {
+ 
+            var table = document.getElementById(tableID);
+ 
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+ 
+            var cell1 = row.insertCell(0);
+            var element1 = document.createElement("input");
+            element1.type = "checkbox";
+            element1.name="chk";
+            cell1.appendChild(element1);
+ 
+            var cell2 = row.insertCell(1);
+             var element2 = document.createElement("select");
+             element2.setAttribute("id","country" );
+             element2.setAttribute("name","country" );
+             
+             var first = document.getElementById('countryList');
+             var options = first.innerHTML;
+             var options = element2.innerHTML + options;
+             element2.innerHTML = options;
+          
+                
+            cell2.appendChild(element2);
+            
+            var cell3 = row.insertCell(2);
+            var element3 = document.createElement("input");
+           element3.type = "text";
+           element3.name="currency";
+           element3.id="currency";
+           cell3.appendChild(element3);
+ 
+ 
+        }
+ 
+        function deleteRow(tableID) {
+            try {
+            var table = document.getElementById(tableID);
+            var rowCount = table.rows.length;
+ 			alert(rowCount);
+            for(var i=0; i<rowCount; i++) {
+                var row = table.rows[i];
+                var ckbox = document.form1.chk;
+                alert(ckbox[i]);
+                alert(rowCount);
+                if(ckbox[i].checked) {
+                    table.deleteRow(i);
+                    rowCount--;
+                    i--;
+                }
+            }
+            }catch(e) {
+                alert(e);
+            }
+        }
+ 
+    </SCRIPT>
+	<style>
 
     .myButton {
         
@@ -132,68 +131,72 @@ function remove(space)
         position:relative;
         top:1px;
     }
-
-</style>
-
-
-</head>
-<body>
-
-<form action="#" modelAttribute="currUpdateCommand" id="myform" onsubmit="return validate();" >
-
-<table border="0" width="100%" id="table1">
-	<tr bgcolor="#0066FF">
-		<td colspan="2" height="34"><b><font size="2" face="Verdana">&nbsp;<font color="#FFFFFF">Manage 
-		currency/ oil price/ weather</font></font></b></td>
-	</tr>
-	<tr>
-		<td width="14%">&nbsp;<b><font size="1" face="Verdana">Select a category</font></b></td>
-		<td width="85%"><select size="1" name="categ">
-		<option selected value="0">Choose...</option>
-		<option value="CUR-E" <c:if test="${currcommand.categ =='CUR-E'}">selected</c:if> >Currency - English</option>
-		<option value="CUR-A" <c:if test="${currcommand.categ =='CUR-A'}">selected</c:if> >Currency - Arabic</option>
-		<option value="OIL-E" <c:if test="${currcommand.categ =='OIL-E'}">selected</c:if> >Oil Price -  English</option>
-		<option value="OIL-A" <c:if test="${currcommand.categ =='OIL-A'}">selected</c:if> >Oil Price - Arabic</option>
-		<option value="WHT-A" <c:if test="${currcommand.categ =='WHT-A'}">selected</c:if> >Weather Info - Arabic</option>
-		<option value="WHT-E" <c:if test="${currcommand.categ =='WHT-E'}">selected</c:if> >Weather Info - English</option>
-		</select>&nbsp;<!-- <input type="submit" value="Edit" onClick="r(document.pressed=this.value)" name="B1"> -->
-		 <input type="submit" name="sbmitbtn" class="myButton" value="Edit" id="edit.html" onclick="document.pressed=this.id"/>
-		</td>
-	</tr>
-  </table>
-
-<br>
-<table border="0" width="100%" id="table1" cellspacing="3" cellpadding="2">
-
-	</tr>
-
-	
-	<tr>
-		<td width="90%"><b><font face="Verdana" color="#008080">&nbsp;<font size="2">Home page Description</font><br>
-&nbsp;</font></b>&nbsp;<textarea  name="homedesc" rows="15" cols="80" style="width: 100%" >${currcommand.homedesc}
-
-			</textarea></td>
-	</tr>
-	<tr>
-		<td width="90%"><b><font face="Verdana" color="#008080" size="2">Main Description<br>
-		</font></b><br>
-	<textarea  name="maindesc" rows="15" cols="80" style="width: 100%">${currcommand.maindesc}
-	</textarea></td>
-	</tr>
-	<tr>
-		<td width="90%"><!-- <input type="submit" onClick="return validate(document.pressed=this.value)" name="save" value="Update" /> -->
-		<input type="submit" name="sbmitbtn" class="myButton"value="Update" id="update.html" onclick="document.pressed=this.id"/>
-			<!-- <input type="reset" name="reset" value="Reset" /> --></td>
-	</tr>
+    </style>
+</HEAD>
+<center><h3>${addoil}</h3></center>
+<BODY>
+<table width="100%">
+<tr>
+<td height="37" bgcolor="#0066FF"><strong><font color="#FFFFFF">Add Country</font></strong></td>
+</tr>
 </table>
-</form>
-
-</body>
-</html>
-
-
-
-
-
-
-
+ <form action="addCountryPrice.html" method="post" enctype="multipart/form-data" name="form1" id="form1" commandName="oilPrice" >
+ <table>
+ <tr>
+ <td width="100%"colspan="2">&nbsp;</td>
+ </tr>
+ <tr>
+ <td><INPUT type="button" class='myButton'value="Add Row" onclick="addRow('dataTable')" />
+ 
+    <INPUT type="button" class="myButton" value="Delete Row" onclick="javascript:deleteRow('dataTable');" />
+    </td>
+ <td></td>
+ </tr>
+ <tr><td>Country</td><td>Price</td></tr>
+ </table>
+    <!-- <INPUT type="button" value="Add Row" onclick="addRow('dataTable')" />
+ 
+    <INPUT type="button" value="Delete Row" onclick="javascript:deleteRow('dataTable');" />
+ -->    <TABLE id="dataTable" width="10%" border="1">
+        <!-- <TR >
+            <TD width="5%"><INPUT type="checkbox" name="chk"/></TD>
+            <TD width="10%"> <input name="files" type="file" id="file"> </TD>
+        </TR> -->
+        <c:forEach items="${lists}" var="list" >
+         <tr>
+          <td width="5%"><input type="checkbox" name="chk"/></td>
+		<td><select size="1" name="country" id="country">
+		<option  value="0">Choose...</option>
+		<%-- <option  value="${list.countryName}">${list.countryName}</option> --%>
+		<option  value="S" <c:if test="${list.countryName =='S'}">selected</c:if> >Saudi Arabia</option>
+		<option  value="N" <c:if test="${list.countryName =='N'}">selected</c:if> >Iran</option>
+		<option  value="I" <c:if test="${list.countryName =='I'}">selected</c:if> >Iraq</option>
+		<option  value="K" <c:if test="${list.countryName =='K'}">selected</c:if> >Kuwait</option>
+		<option  value="U" <c:if test="${list.countryName =='U'}">selected</c:if> >UAE</option>
+		<option  value="Q" <c:if test="${list.countryName =='Q'}">selected</c:if> >Qatar</option>
+		<option  value="O" <c:if test="${list.countryName =='O'}">selected</c:if> >Oman</option>
+		<option  value="Y" <c:if test="${list.countryName =='Y'}">selected</c:if> >Yemen</option>
+		</select>
+		<td><input name="currency" type="text" id="currency" value="${list.oilPrice}"></td>
+    </tr>
+    </c:forEach>
+	</TABLE>
+	<br>
+   <input type="submit" class="myButton" name="Submit" value="Submit" />
+   <div style="display: none">
+   <select size="1" name="countryList" id="countryList">
+		<option  value="0">Choose...</option>
+		<%-- <option  value="${list.countryName}">${list.countryName}</option> --%>
+		<option  value="S"  >Saudi Arabia</option>
+		<option  value="N"  >Iran</option>
+		<option  value="I" >Iraq</option>
+		<option  value="K"  >Kuwait</option>
+		<option  value="U" >UAE</option>
+		<option  value="Q"  >Qatar</option>
+		<option  value="O"  >Oman</option>
+		<option  value="Y"  >Yemen</option>
+		</select>
+   </div>
+ </form>
+</BODY>
+</HTML>

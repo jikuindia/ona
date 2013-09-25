@@ -2,7 +2,10 @@ package com.insync.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.dao.DataAccessException;
@@ -221,7 +224,17 @@ public class AdminEditDaoImpl extends JdbcDaoSupport implements AdminEditDao {
 					newsTitle.setNewsHomePage(rs.getString("HOME_DISPLAY").trim());
 					newsTitle.setNewsDesHom(CommonMethods.convertHexToString(rs.getString("HOME_DESC")));
 					newsTitle.setNewsDesMan(CommonMethods.convertHexToString(rs.getString("MAIN_DESC")));
-					newsTitle.setDate(rs.getDate("NEWS_DATE"));
+					DateFormat df=new SimpleDateFormat("yyyy-mm-dd");
+					 Date today = rs.getDate("NEWS_DATE");
+					 
+					 String date=today.toString();
+					 Date today1 =null;
+					 try{
+					 today1 = df.parse(date);
+					 }catch(Exception e){
+						 e.printStackTrace();
+					 }
+					newsTitle.setDate(today1);
 					newsTitle.setNewsCat(rs.getString("NEWS_CAT").trim());
 				
 				}

@@ -1,6 +1,8 @@
-
 <%@page contentType="text/html;charset=cp1256"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
 <meta http-equiv="Content-Language" content="en-us">
@@ -16,8 +18,10 @@
 
 <script language="javascript" type="text/javascript">
 	function sendLanguage(value) {
+		
 		    if(value=='')
 	    	  value=document.getElementById("lang").value;
+		    
 		dwrService.showTitle(value, function(newsTitleList) {
 			document.getElementById("title").innerHTML = "";
 			var select = document.getElementById("title");
@@ -53,8 +57,25 @@
 	}
 
 	function validateUpdate(newsCat,lang,date,title,newsHomePage,status,newsDesHom,newsDesMan) {
-	
+		alert("validate1")
+		var descHome=document.getElementById('newsDesHom').value;
+		alert(descHome)
+		var desciption=document.getElementById('newsDesMan').value;
+		alert(desciption)
+		alert("validate2")
+		if(descHome=="")
+		{
+		alert("Please select news description for home page.")
+		return false;
+		}
+		else if(desciption=="")
+		{
+		alert("Please select news description.")
+		return false;
+		}
+		alert("validate3")
 		document.newsForm.action = "/ona/newsUpdate.html";
+	return true;
 	
 	}
 
@@ -102,6 +123,18 @@
 		// Insert new URL, this would normaly be done in a popup
 		win.document.forms[0].elements[field_name].value = "blank.jsp";
 	}
+	
+	/* <script language=javascript type='text/javascript'>  */
+	/* function hideDiv() { 
+		
+	var news=document.getElementById('newsCat').value;
+	if (news=="") { 
+	document.getElementById('hiddenDiv').style.visibility = 'hidden'; 
+	} 
+	}  */
+	
+	
+	
 </script>
 <!-- /TinyMCE -->
 <style>
@@ -253,10 +286,10 @@ div.downloadlist ul {
 }
 </style>
 </head>
-
+<center><h3>${newsupdate}${arsucess}${upnews}</h3></center>
 <body topmargin="0" leftmargin="0" bgcolor="#FFFFFF"
 	onload="sendLanguage('${newsDisplay.newsLang}')">
-
+	
 	<table border="0" width="100%" id="table1">
 
 		<tr>
@@ -349,11 +382,12 @@ div.downloadlist ul {
 
 
 	<!-- <form  action="addNews.html"  modelAttribute="NewsAddCommand" name="news"> -->
+	<div id="hiddenDiv">
 	<table border="0" width="100%" id="table1" cellspacing="3"
 		cellpadding="2">
 		<tr bgcolor="#0066FF">
 			<td height="22" colspan="2"><b> <font face="Verdana"
-					color="#FFFFFF">ADD News</font></b></td>
+					color="#FFFFFF"><hr></font></b></td>
 	  </tr>
 		
 		<!-- <tr>
@@ -395,7 +429,8 @@ div.downloadlist ul {
 			<td width="8%"><font face="Verdana" size="1"><b>News
 						date</b></font></td>
 			<td width="90%"><input id="demo3" name="date" type="text"
-				size="20" value="${newsDisplay.date}"><a
+				size="20" value=" <fmt:formatDate pattern="dd/mm/yyyy" 
+            value="${newsDisplay.date}" />"><a
 				href="javascript:NewCal('demo3','ddmmyyyy')"><img
 					src="images/cal.gif" width="16" height="16" border="0"
 					alt="Pick a date"></a></td>
@@ -441,20 +476,20 @@ div.downloadlist ul {
 		<tr>
 			<td width="8%">&nbsp;</td>
 			<td width="90%"><b><font face="Verdana" color="#008080">News
-						Description</font></b> <textarea name="newsDesMan" rows="15" cols="80"
+						Description</font></b> <textarea name="newsDesMan" rows="15" cols="80" id="newsDesMan"
 					style="width: 100%">
 					<value>${newsDisplay.newsDesMan}</value>
 </textarea></td>
 		</tr>
 		<tr>
 			<td width="8%">&nbsp;</td>
-			<td width="90%"><input type="submit" class="myButton" onClick="validateUpdate(newsCat.value,lang.value,date.value,title.value,newsHomePage.value,status.value,newsDesHom.value,newsDesMan.value)"
+			<td width="90%"><input type="submit" class="myButton" onClick="return validateUpdate(newsCat.value,lang.value,date.value,title.value,newsHomePage.value,status.value,newsDesHom.value,newsDesMan.value)"
 				name="save" value="Update" /> <input type="reset" name="reset" class="myButton"
 				value="Reset" /></td>
 		</tr>
 	</table>
 
-
+</div>
 
 
 	</form>

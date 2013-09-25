@@ -4,6 +4,26 @@ pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
  <HTML>
 <HEAD>
+<script type="text/javascript">
+function fileValidate(){
+	  valid = true;
+	  var pict=document.form1.picture.options[document.form1.picture.selectedIndex].value
+alert("hi");
+if ( document.form1.files.value == "" )
+{
+    alert ( "please select picture." );
+    valid = false;
+}
+else if(pict=="0" )
+{
+	 alert ( "please select folder." );
+	    valid = false;
+}
+alert("bye")
+return valid; 	
+}
+
+</script>
     <SCRIPT language="javascript">
         function addRow(tableID) {
  
@@ -99,13 +119,14 @@ pageEncoding="ISO-8859-1"%>
     }
     </style>
 </HEAD>
+<center><h3>${messagePhoto}</h3></center>
 <BODY>
 <table width="100%">
 <tr>
 <td height="37" bgcolor="#0066FF"><strong><font color="#FFFFFF">Add Picture </font></strong></td>
 </tr>
 </table>
- <form action="save.html" method="post" enctype="multipart/form-data" name="form1" id="form1" commandName="uploadForm" >
+ <form action="save.html" method="post" enctype="multipart/form-data" name="form1" id="form1" commandName="uploadForm" onsubmit="return fileValidate()">
  <table>
  <tr>
  <td width="100%"colspan="2">&nbsp;</td>
@@ -113,7 +134,8 @@ pageEncoding="ISO-8859-1"%>
  <tr>
  <td><INPUT type="button" class='myButton'value="Add Row" onclick="addRow('dataTable')" />
  
-    <INPUT type="button" class="myButton"value="Delete Row" onclick="javascript:deleteRow('dataTable');" /></td>
+    <INPUT type="button" class="myButton" value="Delete Row" onclick="javascript:deleteRow('dataTable');" />
+    </td>
  <td></td>
  </tr>
  </table>
@@ -125,9 +147,25 @@ pageEncoding="ISO-8859-1"%>
             <TD width="5%"><INPUT type="checkbox" name="chk"/></TD>
             <TD width="10%"> <input name="files" type="file" id="file"> </TD>
         </TR>
+         <!-- <tr>
+		<td width="11%"><font face="Verdana" size="1"><b>Select Folder</b></font></td>
+		<td><select size="1" name="picture">
+		<option selected value="0">Choose...</option>
+		<option value="M">Main</option>
+		<option value="S">Sub</option>
+		</select></td>
+    </tr> -->
 	</TABLE>
 	<br>
-   <input type="submit" class="myButton" name="Submit" value="Submit files"/>
+	
+		<font face="Verdana" size="1"><b>Select Folder</b></font>
+		<select size="1" name="picture">
+		<option selected value="0">Choose...</option>
+		<option value="M">Main</option>
+		<option value="S">Sub</option>
+		</select>
+   
+   <input type="submit" class="myButton" name="Submit" value="Submit files" />
  </form>
 </BODY>
 </HTML>

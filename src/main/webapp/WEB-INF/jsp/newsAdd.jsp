@@ -1,26 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<!-- <script language="javascript" type="text/javascript" src="js/datetimepicker.js"> -->
 <link rel="stylesheet" href="css/themes/base/jquery.ui.all.css" />
-
-<link rel="stylesheet" type="text/css" media="all" href="css/style.css"></link>
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="css/style.css"></link>
 <script type="text/javascript" src="js/jquery.ui.core.js"></script>
 <script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
- 
-<script type="text/javascript">
-$(function() {
-	$( "#demo3" ).datepicker({
-		showOn: "button",
-		buttonImage: "images/calendar.gif",
-		buttonImageOnly: true,
-		 dateFormat: "mm/dd/yy"
-	});
-	
-});
 
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=cp1256">
@@ -143,6 +133,10 @@ var status=document.news.status.options[document.news.status.selectedIndex].valu
 var title=remove(document.news.title.value);
 var date=remove(document.news.date.value);
 
+var newsDesHom=remove(document.news.newsDesHom.value);
+var descHome=document.getElementById('newsDesHom').value;
+
+var desciption=document.getElementById('newsDesMan').value;
 
 if(newsLang=="0")
 {
@@ -185,6 +179,18 @@ alert("Please select a news status.")
 
 document.news.status.focus();
 }
+else if(descHome=="")
+{
+alert("Please select news description for home page.")
+return false;
+}
+else if(desciption=="")
+{
+alert("Please select news description.")
+return false;
+}
+
+
 
 
 
@@ -219,9 +225,32 @@ function remove(space)
 	}
 	return(plus);
 }
+
+$(function() {
+	$( "#date" ).datepicker({
+		showOn: "button",
+		buttonImage: "images/calendar.gif",
+		buttonImageOnly: true,
+		 dateFormat: "dd/mm/yy",
+		 onClose: function( selectedDate ) {
+				$( "#fromdate" ).datepicker( "option", "maxDate", selectedDate );
+			}
+	});
+	$( "#fromdate" ).datepicker({
+		showOn: "button",
+		buttonImage: "images/calendar.gif",
+		buttonImageOnly: true,
+		 dateFormat: "dd/mm/yy",
+			onClose: function( selectedDate ) {
+				$( "#todate" ).datepicker( "option", "minDate", selectedDate );
+			}
+	});
+});
+
 </script>
 
 </head>
+<center><h3>${addnewssuccess}${incorrect}</h3></center>
 <body>
 <form  action="addNews.html"  modelAttribute="NewsAddCommand" name="news">
 <table border="0" width="100%" id="table1" cellspacing="3" cellpadding="2">
@@ -253,7 +282,7 @@ function remove(space)
 	</tr>
 	<tr>
 		<td width="11%"><font face="Verdana" size="1"><b>News date</b></font></td>
-		<td><input id="demo3" name="date" type="text" size="20"></td>
+		<td><input id="demo3" name="date" type="text" size="20" id="date"><a href="javascript:NewCal('demo3','ddmmmyyyy',true,24)"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a></td>
 	</tr>
 	<tr>
 		<td width="11%"><b><font face="Verdana" size="1">Title</font></b></td>
@@ -278,7 +307,7 @@ function remove(space)
 	<tr>
 		<td width="11%">&nbsp;</td>
 		<td><b><font face="Verdana" color="#008080">News Description (Home Page)</font></b>	
-	<textarea  name="newsDesHom" rows="15" cols="80" style="width: 100%">
+	<textarea  name="newsDesHom" rows="15" cols="80" style="width: 100%" id="newsDesHom">
 		
 	</textarea>
 </td>
@@ -286,13 +315,13 @@ function remove(space)
 	<tr>
 		<td width="11%">&nbsp;</td>
 		<td><b><font face="Verdana" color="#008080">News Description</font></b>		
-<textarea  name="newsDesMan" rows="15" cols="80" style="width: 100%">
+<textarea  name="newsDesMan" rows="15" cols="80" style="width: 100%" id="newsDesMan">
 </textarea>
 </td>
 	</tr>
 	<tr>
 		<td width="11%">&nbsp;</td>
-		<td><input type="submit" class="myButton"onClick="return validate()" name="save" value="Add" />
+		<td><input type="submit" class="myButton" onClick="return validate()" name="save" value="Add" />
 	<input type="reset" class="myButton" name="reset" value="Reset" /></td>
 	</tr>
 </table>

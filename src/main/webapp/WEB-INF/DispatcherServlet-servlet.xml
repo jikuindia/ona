@@ -118,6 +118,7 @@
 	<dwr:controller id="dwrController"></dwr:controller>
 	<dwr:configuration >
        <dwr:convert type="bean" class="com.insync.model.NewsTitleCommand"></dwr:convert>
+       <dwr:convert type="bean" class="com.insync.model.NewsAddCommand"></dwr:convert>
 </dwr:configuration>
 
 <bean id="dwrService" class="com.insync.service.DwrServiceImpl">

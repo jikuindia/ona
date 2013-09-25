@@ -1,28 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
-<link rel="stylesheet" href="css/themes/base/jquery.ui.all.css" />
+<script language="javascript" type="text/javascript" src="js/datetimepicker.js">
 
-<link rel="stylesheet" type="text/css" media="all" href="css/style.css"></link>
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.ui.core.js"></script>
-<script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
- 
+</script>
 <script type="text/javascript">
-$(function() {
-	$( "#demo3" ).datepicker({
-		showOn: "button",
-		buttonImage: "images/calendar.gif",
-		buttonImageOnly: true,
-		 dateFormat: "mm/dd/yy"
-	});
-	
-});
-
-
-
 function validate()
 {
 var prayer1=document.ifthar.prayer1.value;
@@ -95,19 +80,7 @@ function remove(space)
 }
 </script>
 
-<!-- <style>
-td{font-family:Tahoma;font-size:11px;color:#000000;}
-.txt{padding-left:15px;padding-right:15px;padding-top:5px;}
-.date{font-weight:bold;font-size:10px;color:#A7A7A7;}
-.cap{font-weight:bold;color:#2E688E;padding-left:5px;padding-top:4px;padding-bottom:3px;}
-</style>
-<style type="text/css">
-  div.calendar_widget { position: absolute; top: 0px; left: 0px; width:140px; height: 200px; display: none; }
-</style>
-<style type="text/css">
-  div.downloadlist { float:right; border: 1px; background-color: e0e0ff; padding: 4px; border-style: outset; }
-  div.downloadlist ul { list-style: none; margin: 4px; }
-</style> -->
+
 <style>
 
     .myButton {
@@ -159,6 +132,7 @@ td{font-family:Tahoma;font-size:11px;color:#000000;}
 </style>
 
 </head>
+<center><h3>${addifhaar}${iftaar}</h3></center>
 
 <body topmargin="0" leftmargin="0" bgcolor="#FFFFFF" ><center>
 
@@ -212,7 +186,9 @@ td{font-family:Tahoma;font-size:11px;color:#000000;}
 						<td width="23%"><b><font face="Verdana" size="1">Date</font></b></td>
 						<td width="72%">
 							
-                       <input id="demo3" name="date" type="text" size="20">	</td>
+<input id="demo3" name="date" type="text" size="20"><a href="javascript:NewCal('demo3','ddmmmyyyy',true,24)"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a>
+						<!-- <input type="submit" value="Add Now"  name="B1" >
+						<input type="reset" value="Clear" name="B2"> --></td>
 					</tr>
 					<tr>
 					<td></td>
