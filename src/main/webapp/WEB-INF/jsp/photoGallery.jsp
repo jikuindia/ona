@@ -8,25 +8,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/themes/base/jquery.ui.all.css" />
+<link href="pirobox_extended/css_pirobox/style_2/style.css" rel="stylesheet" type="text/css" />
 
 <link rel="stylesheet" type="text/css" media="all" href="css/style.css"></link>
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.ui.core.js"></script>
-<script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+
+<script type="text/javascript" src="pirobox_extended/js/jquery.min.js"></script>
+
+<script type="text/javascript" src="pirobox_extended/js/jquery-ui-1.8.2.custom.min.js"></script>
+<script type="text/javascript" src="pirobox_extended/js/pirobox_extended.js"></script>
+
  
 <script type='text/javascript' src='dwr/engine.js'></script>
 <script type='text/javascript' src='dwr/util.js'></script>
 <script type='text/javascript' src='dwr/interface/dwrService.js'></script>
-<script type="text/javascript" src="js/indexpage.js"></script>
-<script type="text/javascript" src="highslide/highslide-with-html.js"></script>
 
-<style>
-.highslide {
-	cursor: url(highslide/graphics/zoomin.cur), pointer;
-	outline: none;
-}
-</style>
+
 <script type="text/javascript">
+
+$(document).ready(function() {
+	
+});
 	function getPhotos() {
 
 		var date1 = document.getElementById("fromdate").value;
@@ -62,7 +63,7 @@
 											.append(
 													"<td> <a href='pict/"
 															+ data[i]
-															+ "' class='highslide' onclick='return hs.expand(this)'><img src='pict/"+data[i]+"' width=100 height=100/></a></td");
+															+ "' rel='gallery'  class='pirobox_gall'><img src='pict/"+data[i]+"' width=100 height=100/></a></td");
 									j = j + 1;
 								} else {
 									j = 1;
@@ -74,7 +75,7 @@
 											.append(
 													"<td> <a href='pict/"
 															+ data[i]
-															+ "' class='highslide' onclick='return hs.expand(this)'><img src='pict/"+data[i]+"' width=100 height=100/></a></td");
+															+ "' rel='gallery'  class='pirobox_gall' ><img src='pict/"+data[i]+"' width=100 height=100/></a></td");
 									j = j + 1;
 
 								}
@@ -82,7 +83,11 @@
 								dwr.util.byId("photopattern" + id).style.display = ""; // officially we should use table-row, but IE prefers "" for some reason
 
 							}
-					
+							$().piroBox_ext({
+								piro_speed : 700,
+									bg_alpha : 0.5,
+									piro_scroll : true // pirobox always positioned at the center of the page
+								});
 						});
 	}
 	}
@@ -135,6 +140,7 @@
 		
 	</form>
 	<br>
+	<div class="demo">
 	<table border="0" class="rowed grey">
 
 		<tbody id="photobody">
@@ -143,6 +149,8 @@
 			</tr>
 		</tbody>
 	</table>
+</div>
+
 
 
 </body>
