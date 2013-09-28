@@ -8,14 +8,22 @@
 <link rel="stylesheet" type="text/css" media="all" href="css/style.css"></link>
  
 <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen,projection"/>
-
+<link rel="stylesheet" href="jquery/themes/base/jquery.ui.all.css" />
+	
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/jquery.leanModal.min.js"></script>
-<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>  
-<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
-<link href="themes/4/slider.css" rel="stylesheet" type="text/css" />
-<script src="themes/4/jquery-slider.js" type="text/javascript"></script>
+<!-- jquery -->
+<script src="jquery/ui/jquery.ui.core.js"></script>
+	<script src="jquery/ui/jquery.ui.widget.js"></script>
+	<script src="jquery/ui/jquery.ui.mouse.js"></script>
+	<script src="jquery/ui/jquery.ui.button.js"></script>
+	<script src="jquery/ui/jquery.ui.draggable.js"></script>
+	<script src="jquery/ui/jquery.ui.position.js"></script>
+	<script src="jquery/ui/jquery.ui.resizable.js"></script>
+	<script src="jquery/ui/jquery.ui.dialog.js"></script>
+	<script src="jquery/ui/jquery.ui.effect.js"></script>
+	
+	
+
 <script type='text/javascript' src='dwr/engine.js'></script>
 <script type='text/javascript' src='dwr/util.js'></script>
 <script type='text/javascript' src='dwr/interface/dwrService.js'></script>
@@ -51,20 +59,54 @@
 <script src="themes2/1/js-image-slider.js" type="text/javascript"></script>
   
   <!-- zooming pic -->
-  <script type="text/javascript" src="highslide/highslide-with-html.js"></script>
-  
+  <script type="text/javascript">
+  var jQuery_1_9_1 = $.noConflict(true);
+	
+  jQuery_1_9_1(document).ready(function () {
+	
+	  jQuery_1_9_1('#test').weatherfeed(['MUXX0003']);
+   
+	
+});
+function openModal()
+{
+	 jQuery_1_9_1( "#dialog-form" ).dialog({
+	   		autoOpen: true,
+	   		height: 300,
+	   		width: 985,
+	   		modal: true,
+			
+			close: function() {
+				jQuery_1_9_1( "#dialog-form" ).dialog( "destroy" );
+			}
+	   	});
+	 document.getElementById("photoIframe").height="200px";
+	
+
+	}
+	function setIframeSize()
+	{
+		jQuery_1_9_1( "#dialog-form" ).dialog( "option", "height", 675);
+		document.getElementById("photoIframe").height="600px";
+	}
+	function setDefaultIframe()
+	{
+		jQuery_1_9_1( "#dialog-form" ).dialog( "option", "height", 300 );
+		document.getElementById("photoIframe").height="200px";
+	}
+</script>
    <script class="code" type="text/javascript">
-   $(document).ready(function(){
+   jQuery_1_9_1(document).ready(function(){
 		
 		 var line2 = ${currencyDataString};
 		 
-		    var plot2 = $.jqplot('chart2', [line2], {
+		    var plot2 = jQuery_1_9_1.jqplot('chart2', [line2], {
 		      axes: {
 		        xaxis: {
-		          renderer: $.jqplot.DateAxisRenderer,
+		          renderer: jQuery_1_9_1.jqplot.DateAxisRenderer,
 		          label: 'Date',
-		          labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
-		          tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+		          labelRenderer: jQuery_1_9_1.jqplot.CanvasAxisLabelRenderer,
+		          tickRenderer: jQuery_1_9_1.jqplot.CanvasAxisTickRenderer,
 		          tickOptions: {
 		              // labelPosition: 'middle',
 		              angle: 2
@@ -73,42 +115,27 @@
 		        },
 		        yaxis: {
 		          label: 'Currency',
-		          labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+		          labelRenderer: jQuery_1_9_1.jqplot.CanvasAxisLabelRenderer
 		        }
 		      }
 		    });
 		 
 		});
 
-   $(function(){
-	   
-	   $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
-	 });
+ 
    
  </script>
-  
-     <script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider();
-      
-    });
-	
-	function swapTabs(id,hider1){		
-	document.getElementById(id).style.display='block';	
-	document.getElementById(hider1).style.display='none';
-	
-}
-</script>
+ 
  <script class="code" type="text/javascript">$(document).ready(function(){
-        $.jqplot.config.enablePlugins = true;
+	 jQuery_1_9_1.jqplot.config.enablePlugins = true;
         var s1 = ${oilDataList[1]};
         var ticks = ${oilDataList[0]};
         
-        plot1 = $.jqplot('chart1', [s1], {
+        plot1 = jQuery_1_9_1.jqplot('chart1', [s1], {
             // Only animate if we're not using excanvas (not in IE 7 or IE 8)..
-            animate: !$.jqplot.use_excanvas,
+            animate: !jQuery_1_9_1.jqplot.use_excanvas,
             seriesDefaults:{
-                renderer:$.jqplot.BarRenderer,
+                renderer:jQuery_1_9_1.jqplot.BarRenderer,
 				pointLabels: { show: true, location: 'e', edgeTolerance: -15 },
                 shadowAngle: 135,
                 rendererOptions: {
@@ -119,14 +146,14 @@
 
             axes: {
                 yaxis: {
-                    renderer: $.jqplot.CategoryAxisRenderer,
+                    renderer: jQuery_1_9_1.jqplot.CategoryAxisRenderer,
                     ticks: ticks
                 }
             },
             highlighter: { show: false }
         });
     
-        $('#chart1').bind('jqplotDataClick', 
+        jQuery_1_9_1('#chart1').bind('jqplotDataClick', 
             function (ev, seriesIndex, pointIndex, data) {
                 $('#info1').html('series: '+seriesIndex+', point: '+pointIndex+', data: '+data);
             }
@@ -136,7 +163,24 @@
 
  </script>
     
- 
+  <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>  
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+<link href="themes/4/slider.css" rel="stylesheet" type="text/css" />
+<script src="themes/4/jquery-slider.js" type="text/javascript"></script>
+     <script type="text/javascript">
+     var jQuery_1_4_3 = $.noConflict(true);
+     jQuery_1_4_3(window).load(function() {
+    	 jQuery_1_4_3('#slider').nivoSlider();
+      
+    });
+	
+	function swapTabs(id,hider1){		
+	document.getElementById(id).style.display='block';	
+	document.getElementById(hider1).style.display='none';
+	
+}
+</script>
 
 <link href="css/ticker-style.css" rel="stylesheet" type="text/css" />
 <script src="js/jquery.ticker.js" type="text/javascript"></script>
@@ -145,21 +189,17 @@
  
    <script type="text/javascript">
      function tick2(){
-		$('#ticker_02 li:first').slideUp( function () { $(this).appendTo($('#ticker_02')).slideDown(); });
+    	 jQuery_1_4_3('#ticker_02 li:first').slideUp( function () { $(this).appendTo($('#ticker_02')).slideDown(); });
 	}
 	setInterval(function(){ tick2 () }, 3000);
 	
     </script>  
-<script type="text/javascript">
-$(document).ready(function () {
-       $('#test').weatherfeed(['MUXX0003']);
-});
-</script>
+
 
 </head>
 
 <body>
-												
+											
 <input type="hidden" name="lang" id="lang" value="${sessionScope.lang}"/>
 <div class="mainBlock">
 
@@ -250,11 +290,12 @@ $(document).ready(function () {
 
 <div class="div2">
        <!-- start for popup -->
-     <a href="#loginmodal" class="flatbtn" id="modaltrigger"><spring:message code="label.morephoto"/></a>
-  <div id="loginmodal" style="display:none;">
+      
+     <a href="#loginmodal" class="flatbtn" onclick="openModal()"><spring:message code="label.morephoto"/></a>
+  <div  id="dialog-form" style="display:none;">
     
     
-    <iframe src="photoGallery.html" width="1015px" height="800px" frameborder="0" ></iframe>
+    <iframe src="photoGallery.html" width="920px" height="200px" frameborder="0" id="photoIframe" align="top" marginheight="0" marginwidth="0" ></iframe>
    
 					</div>
 					

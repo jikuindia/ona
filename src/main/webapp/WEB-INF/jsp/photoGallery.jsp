@@ -13,9 +13,20 @@
 <link rel="stylesheet" type="text/css" media="all" href="css/style.css"></link>
 
 <script type="text/javascript" src="pirobox_extended/js/jquery.min.js"></script>
-
+<script type="text/javascript">
+var jQuery = $.noConflict(true);
+</script>
 <script type="text/javascript" src="pirobox_extended/js/jquery-ui-1.8.2.custom.min.js"></script>
 <script type="text/javascript" src="pirobox_extended/js/pirobox_extended.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script src="jquery/ui/jquery.ui.datepicker.js"></script>
+<script src="jquery/ui/jquery.ui.core.js"></script>
+<script src="jquery/ui/jquery.ui.widget.js"></script>
+<script type="text/javascript">
+var jQuery_1_9_1 = $.noConflict(true);
+</script>
+
 
  
 <script type='text/javascript' src='dwr/engine.js'></script>
@@ -25,11 +36,11 @@
 
 <script type="text/javascript">
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
 	
 });
 	function getPhotos() {
-
+		
 		var date1 = document.getElementById("fromdate").value;
 		var date2 = document.getElementById("todate").value;
 		     if(date1==""){
@@ -55,11 +66,19 @@ $(document).ready(function() {
 							});
 							var j = 1;
 							var id = 0;
-
+							
+                            if(data.length==0){
+                            	parent.setDefaultIframe();
+                            	document.getElementById('noImageDiv').style.display="";
+                            }
+                            else
+                            	{
+                            	parent.setIframeSize();
+                            	document.getElementById('noImageDiv').style.display="none";
 							for ( var i = 0; i < data.length; i++) {
 								if (j > 1 && j < 9) {
 
-									$("#photopattern" + id)
+									jQuery("#photopattern" + id)
 											.append(
 													"<td> <a href='pict/"
 															+ data[i]
@@ -71,7 +90,7 @@ $(document).ready(function() {
 									dwr.util.cloneNode("photopattern", {
 										idSuffix : id
 									});
-									$("#photopattern" + id)
+									jQuery("#photopattern" + id)
 											.append(
 													"<td> <a href='pict/"
 															+ data[i]
@@ -83,7 +102,8 @@ $(document).ready(function() {
 								dwr.util.byId("photopattern" + id).style.display = ""; // officially we should use table-row, but IE prefers "" for some reason
 
 							}
-							$().piroBox_ext({
+                            	}
+							jQuery().piroBox_ext({
 								piro_speed : 700,
 									bg_alpha : 0.5,
 									piro_scroll : true // pirobox always positioned at the center of the page
@@ -92,26 +112,26 @@ $(document).ready(function() {
 	}
 	}
 	
-		$(function() {
-			$( "#todate" ).datepicker({
-				showOn: "button",
-				buttonImage: "images/calendar.gif",
-				buttonImageOnly: true,
-				 dateFormat: "dd/mm/yy",
-				 onClose: function( selectedDate ) {
-						$( "#fromdate" ).datepicker( "option", "maxDate", selectedDate );
-					}
-			});
-			$( "#fromdate" ).datepicker({
-				showOn: "button",
-				buttonImage: "images/calendar.gif",
-				buttonImageOnly: true,
-				 dateFormat: "dd/mm/yy",
-					onClose: function( selectedDate ) {
-						$( "#todate" ).datepicker( "option", "minDate", selectedDate );
-					}
-			});
+	jQuery_1_9_1(function() {
+		jQuery_1_9_1( "#todate" ).datepicker({
+			showOn: "button",
+			buttonImage: "images/calendar.gif",
+			buttonImageOnly: true,
+			 dateFormat: "dd/mm/yy",
+			 onClose: function( selectedDate ) {
+				 jQuery_1_9_1( "#fromdate" ).datepicker( "option", "maxDate", selectedDate );
+				}
 		});
+		jQuery_1_9_1( "#fromdate" ).datepicker({
+			showOn: "button",
+			buttonImage: "images/calendar.gif",
+			buttonImageOnly: true,
+			 dateFormat: "dd/mm/yy",
+				onClose: function( selectedDate ) {
+					jQuery_1_9_1( "#todate" ).datepicker( "option", "minDate", selectedDate );
+				}
+		});
+	});
 		
 </script>
 </head>
@@ -120,15 +140,15 @@ $(document).ready(function() {
 	<br>
 	<form id="loginform" name="loginform" method="post" action="#">
 
-		<table width="60%"  align="center" border="0" >
+		<table width="100%"  align="center" border="0" >
 		  <tr valign="middle"><td>&nbsp;</td>
        <td><div id=message2 class="text" align="left"></div></td><td></td><td><div id=message3 class="text" align="left"></div></td></tr>
 			<tr valign="middle">			
-				<td ><label for="fromdate"><spring:message
-							code="label.fdate" /></label></td><td > <input type="text" name="fromdate"
+				<td width="20%" align="right"><label for="fromdate"><spring:message
+							code="label.fdate" />:&nbsp;</label></td><td width="20%"> <input type="text" name="fromdate"
 					id="fromdate"  /></td>
-				<td align="left"><label for="todate"><spring:message
-							code="label.tdate" /></label> </td><td ><input type="text" name="todate"
+				<td align="right" width="20%"><label for="todate"><spring:message
+							code="label.tdate" />:&nbsp;</label> </td><td width="40%"><input type="text" name="todate"
 					id="todate"  /></td>
 			</tr>
 			<tr><td colspan="4" align="center"><div class="center"><br>
@@ -141,7 +161,8 @@ $(document).ready(function() {
 	</form>
 	<br>
 	<div class="demo">
-	<table border="0" class="rowed grey">
+	<div style="display:none;width:850px" id="noImageDiv" align="center" >Sorry,No photo found</div>
+	<table border="0" class="rowed grey" align="center" width="100%">
 
 		<tbody id="photobody">
 			<tr id="photopattern" style="display: none;">
