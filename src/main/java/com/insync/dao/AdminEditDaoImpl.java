@@ -141,28 +141,29 @@ public class AdminEditDaoImpl extends JdbcDaoSupport implements AdminEditDao {
 	
 
 	@Override
-	public IftharCommand showPrayerTime(String dt) {
-		IftharCommand prayer= getJdbcTemplate().query(QueryConstant.prayerTime,new Object[]{dt}, 
-				
-				new ResultSetExtractor<IftharCommand>() {
-			public IftharCommand extractData(ResultSet rs)
-					throws SQLException, DataAccessException {
-				IftharCommand pyrtime = null;
-				while (rs.next()) {
-					 pyrtime =new IftharCommand();
-					pyrtime.setPrayer1(rs.getString("TIME1"));
-					pyrtime.setPrayer2(rs.getString("TIME2"));
-					pyrtime.setPrayer3(rs.getString("TIME3"));
-					pyrtime.setPrayer4(rs.getString("TIME4"));
-					pyrtime.setPrayer5(rs.getString("TIME5"));
-				}
-				return pyrtime;
-			}
+	public IftharCommand showPrayerTime(Date minDate,Date maxDate) {
+		IftharCommand prayer= getJdbcTemplate().query(QueryConstant.prayerTime,new Object[]{minDate,maxDate},
+
+		new ResultSetExtractor<IftharCommand>() {
+		public IftharCommand extractData(ResultSet rs)
+		throws SQLException, DataAccessException {
+		IftharCommand pyrtime = null;
+		while (rs.next()) {
+		pyrtime =new IftharCommand();
+		pyrtime.setPrayer1(rs.getString("TIME1"));
+		pyrtime.setPrayer2(rs.getString("TIME2"));
+		pyrtime.setPrayer3(rs.getString("TIME3"));
+		pyrtime.setPrayer4(rs.getString("TIME4"));
+		pyrtime.setPrayer5(rs.getString("TIME5"));
+		}
+		return pyrtime;
+		}
 
 		});
-				
+
 		return prayer;
-	}
+		}
+
 	@Override
 	public List<String> showImageFile(String dt) {
 		//sFileUploadCommand imagefile=getJdbcTemplate().query(QueryConstant.imageFile, )

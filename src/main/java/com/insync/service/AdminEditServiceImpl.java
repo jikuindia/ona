@@ -4,9 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -80,16 +82,29 @@ public class AdminEditServiceImpl implements AdminEditService {
 	}
 	@Transactional
 	public IftharCommand getPrayerTime() {
-		Calendar cal = new GregorianCalendar();
+		/*Calendar cal = new GregorianCalendar();
 		String dt = "";
 		int year = cal.get(Calendar.YEAR);
 		int month = cal.get(Calendar.MONTH) + 1;
 		int day = cal.get(Calendar.DAY_OF_MONTH);
 		dt = "" + month + "-" + day + "-" + year;
+		*/
+		Calendar c = new GregorianCalendar();
+		c.set(Calendar.HOUR_OF_DAY, 0);
+		c.set(Calendar.MINUTE, 0);
+		c.set(Calendar.SECOND, 0);
+		c.set(Calendar.MILLISECOND, 0);
+
+		Date minDate = c.getTime();
+		Date maxDate = new Date(minDate.getTime() + TimeUnit.DAYS.toMillis(1));
+
+
+
+
 
 		// TODO Auto-generated method stub
-		return adminEditDao.showPrayerTime(dt);
-	}
+		return adminEditDao.showPrayerTime(minDate,maxDate);
+		}
 
 	@Override
 	public List<String> getImages() {

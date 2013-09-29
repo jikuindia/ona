@@ -1,5 +1,6 @@
 package com.insync.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import com.insync.model.CurrUpdateCommand;
@@ -29,7 +30,7 @@ public interface AdminEditDao {
 	int newsUpdate(NewsAddCommand newsAddCommand);
 
 	int newsArchive(Integer id,String lang);
-	IftharCommand showPrayerTime(String dName);
+	IftharCommand showPrayerTime(Date minDate,Date maxDate);
 
 	List<String> showImageFile(String dt);
 

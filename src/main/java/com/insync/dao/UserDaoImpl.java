@@ -7,10 +7,12 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
 import com.insync.constant.QueryConstant;
+import com.insync.model.CountryName;
 import com.insync.model.NewsTitleCommand;
 
 public class UserDaoImpl extends JdbcDaoSupport implements UserDao {
@@ -73,11 +75,61 @@ public class UserDaoImpl extends JdbcDaoSupport implements UserDao {
 		return newsTitle;
 	}
 	
-	@Override
-	public int storeEmail(String email1) {
 
-	return getJdbcTemplate().update(QueryConstant.storeEmail, new Object[]{email1});
-	}
+		public List<CountryName> getOilPriceChat(){
+
+		List<CountryName> lists = (List<CountryName>) getJdbcTemplate().query(
+		QueryConstant.getCountry,
+		new ResultSetExtractor<List<CountryName>>() {
+		public List<CountryName> extractData(ResultSet rs)
+		throws SQLException, DataAccessException {
+		List<CountryName> list=new ArrayList<CountryName>();
+
+		while (rs.next()) {
+		CountryName cname = new CountryName();
+		cname.setCountryName(rs.getString("COUNTRY"));
+		cname.setOilPrice(rs.getDouble("OILPRICE"));
+		list.add(cname);
+		}
+		return list;
+		}
+
+		});
+
+		return lists;
+
+		}
+
+		@Override
+		public int storeEmail(String name, String phone, String email1,
+				String address, String subtype) {
+			// TODO Auto-generated method stub
+			int flag1 = 0;
+			//String success="";
+
+			Boolean flag2=getJdbcTemplate().query(QueryConstant.retrieveEmail, new Object[]{email1},
+					new ResultSetExtractor<Boolean>() {
+						Boolean flag = false;
+						
+						@Override
+						public Boolean extractData(ResultSet rs)	
+								throws SQLException {
+							while (rs.next()) {
+								flag = true;
+							}
+							return flag;
+						}
+
+					});
+			if (flag2 == false) {
+				flag1 = getJdbcTemplate().update(
+						QueryConstant.storeEmail,
+						new Object[] { name, phone, email1,
+								address, subtype });
+			}
+			
+			return flag1;
+		}
 
 
 }

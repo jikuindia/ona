@@ -163,40 +163,42 @@ return valid;
             <TD width="10%"> <input name="files" type="file" id="file"> </TD>
         </TR> -->
         <c:forEach items="${lists}" var="list" >
-         <tr>
-          <td width="5%"><input type="checkbox" name="chk"/></td>
-		<td><select size="1" name="country" id="country">
-		<option  value="0">Choose...</option>
-		<%-- <option  value="${list.countryName}">${list.countryName}</option> --%>
-		<option  value="S" <c:if test="${list.countryName =='S'}">selected</c:if> >Saudi Arabia</option>
-		<option  value="N" <c:if test="${list.countryName =='N'}">selected</c:if> >Iran</option>
-		<option  value="I" <c:if test="${list.countryName =='I'}">selected</c:if> >Iraq</option>
-		<option  value="K" <c:if test="${list.countryName =='K'}">selected</c:if> >Kuwait</option>
-		<option  value="U" <c:if test="${list.countryName =='U'}">selected</c:if> >UAE</option>
-		<option  value="Q" <c:if test="${list.countryName =='Q'}">selected</c:if> >Qatar</option>
-		<option  value="O" <c:if test="${list.countryName =='O'}">selected</c:if> >Oman</option>
-		<option  value="Y" <c:if test="${list.countryName =='Y'}">selected</c:if> >Yemen</option>
-		</select>
-		<td><input name="currency" type="text" id="currency" value="${list.oilPrice}"></td>
-    </tr>
-    </c:forEach>
-	</TABLE>
-	<br>
-   <input type="submit" class="myButton" name="Submit" value="Submit" />
-   <div style="display: none">
-   <select size="1" name="countryList" id="countryList">
-		<option  value="0">Choose...</option>
-		<%-- <option  value="${list.countryName}">${list.countryName}</option> --%>
-		<option  value="S"  >Saudi Arabia</option>
-		<option  value="N"  >Iran</option>
-		<option  value="I" >Iraq</option>
-		<option  value="K"  >Kuwait</option>
-		<option  value="U" >UAE</option>
-		<option  value="Q"  >Qatar</option>
-		<option  value="O"  >Oman</option>
-		<option  value="Y"  >Yemen</option>
-		</select>
-   </div>
+<tr>
+<td width="5%"><input type="checkbox" name="chk"/></td>
+<td><select size="1" name="country" id="country">
+<option value="0">Choose...</option>
+<%-- <option value="${list.countryName}">${list.countryName}</option> --%>
+<option value="Saudi Arabia" <c:if test="${list.countryName eq 'Saudi Arabia'}">selected</c:if> >Saudi Arabia</option>
+<option value="Iran" <c:if test="${list.countryName eq 'Iran'}">selected</c:if> >Iran</option>
+<option value="Iraq" <c:if test="${list.countryName eq 'Iraq'}">selected</c:if> >Iraq</option>
+<option value="Kuwait" <c:if test="${list.countryName eq 'Kuwait'}">selected</c:if> >Kuwait</option>
+<option value="UAE" <c:if test="${list.countryName eq 'UAE'}">selected</c:if> >UAE</option>
+<option value="Qatar" <c:if test="${list.countryName eq 'Qatar'}">selected</c:if> >Qatar</option>
+<option value="Oman" <c:if test="${list.countryName eq'Oman'}">selected</c:if> >Oman</option>
+<option value="Yemen" <c:if test="${list.countryName eq'Yemen'}">selected</c:if> >Yemen</option>
+</select>
+<td><input name="currency" type="text" id="currency" value="${list.oilPrice}"></td>
+</tr>
+</c:forEach>
+</TABLE>
+<br>
+<input type="submit" class="myButton" name="Submit" value="Submit" />
+<div style="display: none">
+<select size="1" name="countryList" id="countryList">
+<option value="0">Choose...</option>
+<%-- <option value="${list.countryName}">${list.countryName}</option> --%>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Iran">Iran</option>
+<option value="Iraq">Iraq</option>
+<option value="Kuwait">Kuwait</option>
+<option value="UAE">UAE</option>
+<option value="Qatar">Qatar</option>
+<option value="Oman">Oman</option>
+<option value="Yemen">Yemen</option>
+</select>
+</div>
+
+   
  </form>
 </BODY>
 </HTML>

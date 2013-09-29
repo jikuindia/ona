@@ -1,16 +1,19 @@
 package com.insync.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.aspectj.weaver.ArrayAnnotationValue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.insync.constant.ConvertURL;
 import com.insync.model.CurrUpdateCommand;
 import com.insync.model.IftharCommand;
 import com.insync.model.NewsTitleCommand;
@@ -37,7 +40,13 @@ public class UserController {
 			
 		 map.addAttribute("newsTitleCommand",newsTitleCommand);
 		 //for currency chat
-		 String currencyDataString=dwrService.getCurrencyChat();
+		 List currencyDataString=new ArrayList();
+		try {
+			currencyDataString = ConvertURL.getContents();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		 map.addAttribute("currencyDataString", currencyDataString);
 			
 		//for prayer data

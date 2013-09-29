@@ -34,21 +34,21 @@ border-style:none;}
 <div class="menuBg float_left">
 <div class="float_left"><div class="menuText">Home Page</div></div>
 <div class="menuSeperator float_left"></div>           
-  <div class="float_left"><div class="menuText"><a href="/ona/addNewsDisplay.html">Add News</a>                      
+  <div class="float_left"><div class="menuText"><a class="menuText" href="/ona/addNewsDisplay.html">Add News</a>                      
 </div></div>
- <div class="float_left"><div class="menuText"><a href="/ona/displayNews.html">Edit News</a>                      
+ <div class="float_left"><div class="menuText"><a class="menuText" href="/ona/displayNews.html">Edit News</a>                      
 </div></div>
 <div class="menuSeperator float_left"></div>
-<div class="float_left"><div class="menuText"><a href="/ona/ifthaar.html">Ifthaar</a></div></div>
+<div class="float_left"><div class="menuText"><a class="menuText" href="/ona/ifthaar.html">Ifthaar</a></div></div>
 <div class="menuSeperator float_left"></div>
-<div class="float_left"><div class="menuText"><a href="/ona/addOilPrice.html">Oil Price</a></div></div>
+<div class="float_left"><div class="menuText"><a class="menuText" href="/ona/addOilPrice.html">Oil Price</a></div></div>
 <div class="menuSeperator float_left"></div>
-<div class="float_left"><div class="menuText"><a href="/ona/multiShow.html">Add Picture</a></div></div>
+<div class="float_left"><div class="menuText"><a class="menuText" href="/ona/multiShow.html">Add Picture</a></div></div>
 <div class="menuSeperator float_left"></div>
-<div class="float_left"><div class="menuText"><a href="/ona/changePassword.html">Change Password</a></div></div>
+<div class="float_left"><div class="menuText"><a class="menuText" href="/ona/changePassword.html">Change Password</a></div></div>
 <div class="menuSeperator float_left"></div>
 
-<div class="float_left"><div class="menuText"><a href="/ona/logout.html">Logout</a></div></div>
+<div class="float_left"><div class="menuText"><a class="menuText" href="/ona/logout.html">Logout</a></div></div>
 </div>
 <div class="menuRightBg float_left"></div>
 </div>

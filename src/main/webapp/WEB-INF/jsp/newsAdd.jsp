@@ -179,12 +179,12 @@ alert("Please select a news status.")
 
 document.news.status.focus();
 }
-else if(descHome=="")
+else if(descHome=="0")
 {
 alert("Please select news description for home page.")
 return false;
 }
-else if(desciption=="")
+else if(desciption=="0")
 {
 alert("Please select news description.")
 return false;

@@ -19,6 +19,7 @@ public interface QueryConstant {
 	String updateNewENG="update INTERNET_NEWS_ENG set TITLE=?, NEWS_STATUS=?,HOME_DISPLAY=?,HOME_DESC=?,MAIN_DESC=?,NEWS_DATE=?,NEWS_CAT=? where SR_NO=?";
 	String updateNewARB="update INTERNET_NEWS set TITLE=?, NEWS_STATUS=?,HOME_DISPLAY=?,HOME_DESC=?,MAIN_DESC=?,NEWS_DATE=?,NEWS_CAT=? where SR_NO=?";
 	String storeEmail="INSERT INTO ONA2.INTERNET_SUBSCRIBER(EMAIL) VALUES(?)";
+	String retrieveEmail="SELECT * FROM ONA2.INTERNET_SUBSCRIBER where EMAIL=?";
 	String getCountry="SELECT COUNTRY,OILPRICE FROM INTERNET_OILPRICE";
 	String storeOil="INSERT INTO INTERNET_OILPRICE(ID,COUNTRY,OILPRICE) VALUES(?,?,?)";
 	
@@ -26,7 +27,7 @@ public interface QueryConstant {
 	String getTitleAra="select SR_NO,TITLE from ONA2.INTERNET_NEWS where NEWS_DATE=to_date(?,'mm-dd-yyyy')";
 	String getNewsDescEng="select TITLE,MAIN_DESC from INTERNET_NEWS_ENG where SR_NO=?";
 	String getNewsDescArb="select TITLE,MAIN_DESC from INTERNET_NEWS where SR_NO=?";
-	String prayerTime="select TIME1,TIME2,TIME3,TIME4,TIME5 from internet_ifthar where PRAY_DATE =to_date(?,'mm-dd-yyyy')";
+	String prayerTime="select TIME1,TIME2,TIME3,TIME4,TIME5 from internet_ifthar where PRAY_DATE between ? and ?" ;
     String imageFile="select IMG_URL from INTERNET_IMG where CREATED_DATE=to_date(?,'mm-dd-yyyy')";
     String serchPhoto="select IMG_URL from INTERNET_IMG where created_date between to_date(?,'mm/dd/yyyy') and to_date(?,'mm/dd/yyyy')+1 order by IMG_ID desc";
 

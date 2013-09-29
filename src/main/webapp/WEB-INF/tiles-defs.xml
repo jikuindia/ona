@@ -42,7 +42,7 @@
 
 	<definition name="adminLayout" template="/WEB-INF/tiles/adminLayout.jsp">
 		<put-attribute name="title" value="Template" />
-		<put-attribute name="adminHeader" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="adminHeader" value="/WEB-INF/tiles/loginHeader.jsp" />
 		<put-attribute name="adminMenu" value="/WEB-INF/tiles/adminMenu.jsp" />
 		<put-attribute name="adminBody" value="/WEB-INF/tiles/body.jsp" />
 		<put-attribute name="adminFooter" value="/WEB-INF/tiles/footer.jsp" />
@@ -116,7 +116,7 @@
 
 	<definition name="loginLayout" template="/WEB-INF/tiles/loginLayout.jsp">
 		<put-attribute name="title" value="Template" />
-		<put-attribute name="loginHeader" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="loginHeader" value="/WEB-INF/tiles/loginHeader.jsp" />
 		<put-attribute name="loginBody" value="/WEB-INF/tiles/body.jsp" />
 		<put-attribute name="loginFooter" value="/WEB-INF/tiles/footer.jsp" />
 	</definition>

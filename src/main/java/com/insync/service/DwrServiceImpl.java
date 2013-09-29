@@ -20,8 +20,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.insync.constant.CommonMethods;
+import com.insync.constant.ConvertURL;
 import com.insync.dao.AdminEditDao;
 import com.insync.dao.UserDao;
+import com.insync.model.CountryName;
 import com.insync.model.NewsAddCommand;
 import com.insync.model.NewsTitleCommand;
 import com.insync.util.Mail;
@@ -113,137 +115,55 @@ public class DwrServiceImpl implements DwrService {
 				return searchPictList;
 	}
 
-	public String getCurrencyChat() {
-		StringBuffer currencyData = new StringBuffer("[");
-		Properties prop = new Properties();
+	public List<String> getCurrencyChat() {
+		List<String> currencyDataList=new ArrayList<String>();
 		try {
-			prop.load(DwrServiceImpl.class.getClassLoader()
-					.getResourceAsStream("imagepth.properties"));
-		
-			FileInputStream file = new FileInputStream(new File( prop.getProperty("currency.file.path")));
-
-			// Get the workbook instance for XLS file
-			XSSFWorkbook workbook = new XSSFWorkbook(file);
-
-			// Get first sheet from the workbook
-			XSSFSheet sheet = workbook.getSheetAt(0);
-
-			// Get iterator to all the rows in current sheet
-			Iterator<Row> rowIterator = sheet.iterator();
-
-			while (rowIterator.hasNext()) {
-				Row row = rowIterator.next();
-				String retVal1 = "";
-				String retVal2 = "";
-				System.out.println(row.getRowNum());
-				Cell cell1 = row.getCell(0);
-				Cell cell2 = row.getCell(1);
-				if (cell1 != null && cell2 != null) {
-					switch (cell1.getCellType()) {
-					case Cell.CELL_TYPE_NUMERIC:
-						retVal1 = isNumberOrDate(cell1);
-						break;
-
-					}
-
-					switch (cell2.getCellType()) {
-					case Cell.CELL_TYPE_NUMERIC:
-						retVal2 = isNumberOrDate(cell2);
-						break;
-
-					}
-					   if(retVal1!="" && retVal2 != "")
-						currencyData.append("['").append(retVal1).append("',")
-								.append(retVal2).append("]").append(",");
-
-				}
-
-			}
-			currencyData.deleteCharAt(currencyData.lastIndexOf(","));
-			currencyData.append("]");
-			currencyData.toString();
+			currencyDataList=ConvertURL.getContents();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return currencyData.toString();
+		return currencyDataList;
 
 	}
 		
 	public List<String> getOilPriceChat() {
-		StringBuffer countryList = new StringBuffer("[");
+		StringBuffer countryList = new StringBuffer("['");
 		StringBuffer priceList = new StringBuffer("[");
-		List<String> oilDataList=new ArrayList<String>();
-		Properties prop = new Properties();
-			try {
-				prop.load(DwrServiceImpl.class.getClassLoader()
-						.getResourceAsStream("imagepth.properties"));
-			
-			FileInputStream file = new FileInputStream(new File( prop.getProperty("oil.file.path")));
+		List<String> oilDataList = new ArrayList<String>();
 
-			// Get the workbook instance for XLS file
-			XSSFWorkbook workbook = new XSSFWorkbook(file);
 
-			// Get first sheet from the workbook
-			XSSFSheet sheet = workbook.getSheetAt(0);
-
-			// Get iterator to all the rows in current sheet
-			Iterator<Row> rowIterator = sheet.iterator();
-
-			while (rowIterator.hasNext()) {
-				Row row = rowIterator.next();
-				String retVal1 = "";
-				String retVal2 = "";
-				System.out.println(row.getRowNum());
-				Cell cell1 = row.getCell(0);
-				Cell cell2 = row.getCell(1);
-				if (cell1 != null && cell2 != null && row.getRowNum()!=0) {
-					switch (cell1.getCellType()) {
-					case Cell.CELL_TYPE_NUMERIC:
-						retVal1 = isNumberOrDate(cell1);
-						break;
-					case Cell.CELL_TYPE_STRING:
-						retVal1 = cell1.getStringCellValue();
-						break;
-
-					}
-
-					switch (cell2.getCellType()) {
-					case Cell.CELL_TYPE_NUMERIC:
-						retVal2 = isNumberOrDate(cell2);
-						break;
-					case Cell.CELL_TYPE_STRING:
-						retVal2 = cell2.getStringCellValue();
-						break;
-
-					}
-					   if(retVal1!="")
-						   countryList.append("'").append(retVal1).append("',");
-					   if(retVal2!="")
-						   priceList.append(retVal2).append(",");
-				}
-
-			}
-			countryList.deleteCharAt(countryList.lastIndexOf(","));
-			countryList.append("]");
-			priceList.deleteCharAt(priceList.lastIndexOf(","));
-			priceList.append("]");
-			oilDataList.add(countryList.toString());
-			oilDataList.add(priceList.toString());
-			
-		} catch (Exception e) {
-			e.printStackTrace();
+		List<CountryName> list=userDao.getOilPriceChat();
+		for(CountryName c:list){
+		countryList.append(c.getCountryName()).append("','");
+		priceList.append(c.getOilPrice()).append(",");
 		}
+		countryList.deleteCharAt(countryList.lastIndexOf("'"));
+		countryList.deleteCharAt(countryList.lastIndexOf(","));
+		countryList.append("]");
+		priceList.deleteCharAt(priceList.lastIndexOf(","));
+		priceList.append("]");
+		oilDataList.add(countryList.toString());
+		oilDataList.add(priceList.toString());
 		return oilDataList;
 
-	}
+		}
+
 	
-	
-	public void getSubscribe(String email) throws SQLException{
-        int flag=userDao.storeEmail(email);
+	public String getSubscribe(String name,String phone,String email,String address,String subtype) throws SQLException{
+        int flag=userDao.storeEmail(name,phone,email,address,subtype);
+        String message="";
+        if(flag==1){
+        message="You have Successfully subscribe";	
         Mail mail=new Mail();
         mail.sendMailToUser(email);
         
+}else{
+	message="alredy subscribed";
 }
+	return message;
+
+	}	
 	
 
 	private String isNumberOrDate(Cell cell) {

@@ -98,35 +98,42 @@ function openModal()
    <script class="code" type="text/javascript">
    jQuery_1_9_1(document).ready(function(){
 		
-		 var line2 = ${currencyDataString};
-		 
-		    var plot2 = jQuery_1_9_1.jqplot('chart2', [line2], {
-		      axes: {
-		        xaxis: {
-		          renderer: jQuery_1_9_1.jqplot.DateAxisRenderer,
-		          label: 'Date',
-		          labelRenderer: jQuery_1_9_1.jqplot.CanvasAxisLabelRenderer,
-		          tickRenderer: jQuery_1_9_1.jqplot.CanvasAxisTickRenderer,
-		          tickOptions: {
-		              // labelPosition: 'middle',
-		              angle: 2
-		          }
-		           
+	 
+		    var s1 = ${currencyDataString[1]};
+		    var s2 = ${currencyDataString[2]};
+		    var ticks = ${currencyDataString[0]};
+		    var plot1 =jQuery_1_9_1.jqplot('chart2', [s1, s2], {
+		         seriesDefaults:{
+		            renderer:jQuery_1_9_1.jqplot.BarRenderer,
+		            rendererOptions: {fillToZero: true}
 		        },
-		        yaxis: {
-		          label: 'Currency',
-		          labelRenderer: jQuery_1_9_1.jqplot.CanvasAxisLabelRenderer
+		          series:[
+		            {label:'Buy'},
+		            {label:'Sell'},
+		           
+		        ],
+		           legend: {
+		            show: true,
+		            placement: 'outsideGrid'
+		        },
+		        axes: {
+		            xaxis: {
+		                renderer:jQuery_1_9_1.jqplot.CategoryAxisRenderer,
+		                ticks: ticks
+		            },
+		            yaxis: {
+		                pad: 1.05,
+		                tickOptions: {formatString: '$%d'}
+		            }
 		        }
-		      }
 		    });
-		 
 		});
-
- 
+		 
+	
    
  </script>
  
- <script class="code" type="text/javascript">$(document).ready(function(){
+ <script class="code" type="text/javascript">jQuery_1_9_1(document).ready(function(){
 	 jQuery_1_9_1.jqplot.config.enablePlugins = true;
         var s1 = ${oilDataList[1]};
         var ticks = ${oilDataList[0]};
@@ -326,12 +333,12 @@ function openModal()
 <div style="padding:10px;">
 <div class="urlbg">
 <div class="bul float_left"></div>
-<div class="UrlName1 float_left"><a href="http://www.fananews.com/en" target="_blank">www.fananews.com/en</a></div>
+<div class="UrlName1 float_left"><a href="http://www.fananews.com/en" target="_blank">FEDERATION&nbsp;OF&nbsp;ARAB&nbsp;NEWS&nbsp;AGENCIES</a></div>
 </div>
 
 <div class="urlbg">
 <div class="bul float_left"></div>
-<div class="UrlName1 float_left"><a href="http://www.oananews.org/" target="_blank">www.oananews.org/</a></div>
+<div class="UrlName1 float_left"><a href="http://www.oananews.org/" target="_blank">OANA - NEWS AGENCIES</a></div>
 </div>
 
 <div class="urlbg">
@@ -348,15 +355,15 @@ function openModal()
 <div style="padding:10px;">
 <div class="urlbg">
 <div class="bul float_left"></div>
-<div class="UrlName1 float_left"><a href ="http://wam.org.ae" target="_blank">www.wam.org.ae</a></div>
+<div class="UrlName1 float_left"><a href ="http://wam.org.ae" target="_blank">EMIRATES NEWS AGENCY</a></div>
 </div>
 <div class="urlbg">
 <div class="bul float_left"></div>
-<div class="UrlName1 float_left"><a href ="http://qnaol.net" target="_blank">www.qnaol.net</a></div>
+<div class="UrlName1 float_left"><a href ="http://qnaol.net" target="_blank">QATAR NEWS AGENCY</a></div>
 </div>
 <div class="urlbg">
 <div class="bul float_left"></div>
-<div class="UrlName1 float_left"><a href ="http://bna.bh" target="_blank">www.bna.bh</a></div>
+<div class="UrlName1 float_left"><a href ="http://bna.bh" target="_blank">BAHRAIN NEWS AGENCY</a></div>
 </div>
 <div class="urlbg">
 <div class="bul float_left"></div>
