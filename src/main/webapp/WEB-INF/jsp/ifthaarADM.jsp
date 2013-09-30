@@ -4,8 +4,15 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
-<script language="javascript" type="text/javascript" src="js/datetimepicker.js">
+ <link rel="stylesheet" href="css/themes/base/jquery.ui.all.css" />
 
+ <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script src="jquery/ui/jquery.ui.datepicker.js"></script>
+ <script src="jquery/ui/jquery.ui.core.js"></script> 
+
+
+<script type="text/javascript">
+var jQuery_1_9_1 = $.noConflict(true);
 </script>
 <script type="text/javascript">
 function validate()
@@ -78,6 +85,18 @@ function remove(space)
 	}
 	return(plus);
 }
+
+jQuery_1_9_1(function() {
+	jQuery_1_9_1( "#date" ).datepicker({
+		showOn: "button",
+		buttonImage: "images/calendar.gif",
+		buttonImageOnly: true,
+		 dateFormat: "dd/mm/yy",
+		 onClose: function( selectedDate ) {
+			 jQuery_1_9_1( "#date" ).datepicker( "option", "maxDate", selectedDate );
+			}
+	});
+});
 </script>
 
 
@@ -186,7 +205,7 @@ function remove(space)
 						<td width="23%"><b><font face="Verdana" size="1">Date</font></b></td>
 						<td width="72%">
 							
-<input id="demo3" name="date" type="text" size="20"><a href="javascript:NewCal('demo3','ddmmmyyyy',true,24)"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a>
+<input id="date" name="date" type="text">
 						<!-- <input type="submit" value="Add Now"  name="B1" >
 						<input type="reset" value="Clear" name="B2"> --></td>
 					</tr>

@@ -36,6 +36,7 @@ border-style:none;}
 <div class="menuSeperator float_left"></div>           
   <div class="float_left"><div class="menuText"><a class="menuText" href="/ona/addNewsDisplay.html">Add News</a>                      
 </div></div>
+<div class="menuSeperator float_left"></div>
  <div class="float_left"><div class="menuText"><a class="menuText" href="/ona/displayNews.html">Edit News</a>                      
 </div></div>
 <div class="menuSeperator float_left"></div>

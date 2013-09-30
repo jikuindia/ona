@@ -13,8 +13,13 @@
 <script type='text/javascript' src='dwr/interface/dwrService.js'></script>
 <script language="javascript" type="text/javascript"
 	src="Editor/jscripts/tiny_mce/tiny_mce.js"></script>
-<script language="javascript" type="text/javascript"
-	src="js/datetimepicker.js"></script>
+	 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script src="jquery/ui/jquery.ui.datepicker.js"></script>
+	 <script src="jquery/ui/jquery.ui.core.js"></script>
+	  <link rel="stylesheet" href="css/themes/base/jquery.ui.all.css" />
+	<script type="text/javascript">
+var jQuery_1_9_1 = $.noConflict(true);
+</script>
 
 <script language="javascript" type="text/javascript">
 	function sendLanguage(value) {
@@ -33,7 +38,6 @@
 
 				option = document.createElement("option");
 				if (newsTitleList[i].srno == '${newsDisplay.srno}') {
-				alert(newsTitleList[i].srno);
 					option.selected = true;
 				}
 				option.setAttribute("value", titleDisplay);
@@ -57,12 +61,9 @@
 	}
 
 	function validateUpdate(newsCat,lang,date,title,newsHomePage,status,newsDesHom,newsDesMan) {
-		alert("validate1")
 		var descHome=document.getElementById('newsDesHom').value;
-		alert(descHome)
+		
 		var desciption=document.getElementById('newsDesMan').value;
-		alert(desciption)
-		alert("validate2")
 		if(descHome=="")
 		{
 		alert("Please select news description for home page.")
@@ -73,7 +74,6 @@
 		alert("Please select news description.")
 		return false;
 		}
-		alert("validate3")
 		document.newsForm.action = "/ona/newsUpdate.html";
 	return true;
 	
@@ -133,7 +133,17 @@
 	} 
 	}  */
 	
-	
+	jQuery_1_9_1(function() {
+		jQuery_1_9_1( "#date" ).datepicker({
+			showOn: "button",
+			buttonImage: "images/calendar.gif",
+			buttonImageOnly: true,
+			 dateFormat: "dd/mm/yy",
+			 onClose: function( selectedDate ) {
+				 jQuery_1_9_1( "#date" ).datepicker( "option", "maxDate", selectedDate );
+				}
+		});
+	});
 	
 </script>
 <!-- /TinyMCE -->
@@ -428,12 +438,8 @@ div.downloadlist ul {
 		<tr>
 			<td width="8%"><font face="Verdana" size="1"><b>News
 						date</b></font></td>
-			<td width="90%"><input id="demo3" name="date" type="text"
-				size="20" value=" <fmt:formatDate pattern="dd/mm/yyyy" 
-            value="${newsDisplay.date}" />"><a
-				href="javascript:NewCal('demo3','ddmmyyyy')"><img
-					src="images/cal.gif" width="16" height="16" border="0"
-					alt="Pick a date"></a></td>
+			<td width="20%"><input id="date" name="date" type="text">
+					</td>
 		</tr>
 		<tr>
 			<td width="8%"><b><font face="Verdana" size="1">Title</font></b></td>

@@ -28,20 +28,20 @@
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.phone"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.phone"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3"><spring:message code="label.phonONA"/>
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt"><spring:message code="label.phonONA"/>
 				</font></span></td>
 			</tr>
 			<tr>
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.fax"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.fax"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3"><spring:message code="label.faxONA"/>
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt"><spring:message code="label.faxONA"/>
 				</font></span></td>
 			</tr>
 		</table>
@@ -61,20 +61,20 @@
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.phone"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.phone"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3"><spring:message code="label.ODEphno"/>
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt"><spring:message code="label.ODEphno"/>
 				</font></span></td>
 			</tr>
 			<tr>
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.fax"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.fax"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3"><spring:message code="label.ODEfax"/>
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt"><spring:message code="label.ODEfax"/>
 				</font></span></td>
 			</tr>
 		</table>
@@ -84,12 +84,12 @@
 		<font face="Verdana" style="font-size: 9pt"><spring:message code="label.email"/>&nbsp;</font><font face="Verdana" size="2"><b>
 		<a href="mailto:newsfeed@omannews.gov.om"><spring:message code="label.newsfeedId"/></a><br>
 		<br>
-		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 		</span> <a href="mailto:editorarabic@omannews.gov.com"><spring:message code="label.aditorarbicID"/>
 		</a><br>
 		<br>
-		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		</span><a href="mailto:onaarabic@hotmail.com"><spring:message code="label.omanarbicID"/></a></b></font></p>
+		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</span><a href="mailto:onaarabic@hotmail.com"><spring:message code="label.omanarbicID"/></a></b></font></p>
 		<hr align="left" color="#ff6600">
 		<p align="justify" style="margin: 0 10px" dir="ltr"><b>
 		<font color="#008080" face="Verdana" size="3"><spring:message code="label.onaEditorialManager"/></font></b></p>
@@ -99,20 +99,20 @@
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.phone"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.phone"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3">
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt">
 				<spring:message code="label.OEMPhno"/></font></span></td>
 			</tr>
 			<tr>
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.fax"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.fax"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3">
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt">
 				<spring:message code="label.OEMFax"/></font></span></td>
 			</tr>
 		</table>
@@ -123,24 +123,21 @@
 		<a href="mailto:newsfeed@omannews.gov.om"><spring:message code="label.newsfeedId"/></a></b></font></p>
 		<p align="justify" style="margin: 0 10px" dir="ltr">
 		<b><font face="Verdana" size="2"><br>
-		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</span>&nbsp; <span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
 		<a href="mailto:editorarabic@omannews.gov.com">
-		<spring:message code="label.aditorarbicID"/></a></font><span lang="ar-om"><font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		</font></span></b></p>
+		<spring:message code="label.aditorarbicID"/></a></font>
+		</b></p>
+		 <p align="justify" style="margin: 0 10px" dir="ltr">
+		<font face="Verdana" style="font-weight:700" size="2">
+		 <span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></font></p>
 		<p align="justify" style="margin: 0 10px" dir="ltr">
 		<font face="Verdana" style="font-weight:700" size="2">
-		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		</span> </font></p>
-		<p align="justify" style="margin: 0 10px" dir="ltr">
-		<font face="Verdana" style="font-weight:700" size="2">
-		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</span>&nbsp; <span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
 		<a href="mailto:onaarabic@hotmail.com"><spring:message code="label.omanarbicID"/></a></font></p>
-		<p align="justify" style="margin: 0 10px" dir="ltr">
-		<b>
-		<font face="Verdana" size="2">
-		<font color="#0000FF">&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></b></p>
+		
 		<hr align="left" color="#ff6600">
 		<p align="justify" style="margin: 0 10px" dir="ltr">&nbsp;</p>
 		<p align="justify" style="margin: 0 10px" dir="ltr"><b>
@@ -151,20 +148,20 @@
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.phone"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.phone"/></font></td>
 				<td width="72%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.arbicDeskPhno"/>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.arbicDeskPhno"/>
 				</font></td>
 			</tr>
 			<tr>
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.fax"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.fax"/></font></td>
 				<td width="72%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3"><spring:message code="label.arbicDeskFax"/>
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt"><spring:message code="label.arbicDeskFax"/>
 				</font></span></td>
 			</tr>
 		</table>
@@ -175,11 +172,11 @@
 		<a href="mailto:newsfeed@omannews.gov.om"><font size="2">
 		<spring:message code="label.newsfeedId"/></font></a><font size="2"><br>
 		<br>
-		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</span><a href="mailto:editorarabic@omannews.gov.com">
 		<spring:message code="label.aditorarbicID"/></a><br>
 		<br>
-		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</span></font><a href="mailto:onaarabic@hotmail.com"><font size="2">
 		<spring:message code="label.omanarbicID"/></font></a></b></p>
 		<hr align="left" color="#ff6600">
@@ -192,26 +189,24 @@
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.phone"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.phone"/></font></td>
 				<td width="72%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3"><spring:message code="label.engDeskPhno"/>
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt"><spring:message code="label.engDeskPhno"/>
 				</font></span></td>
 			</tr>
 			<tr>
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.fax"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.fax"/></font></td>
 				<td width="72%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.engDeskFax"/>&nbsp;</font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.engDeskFax"/>&nbsp;</font></td>
 			</tr>
 		</table>
-		 <center>
 		<p align="justify" style="margin: 0 10px" dir="ltr">
 		<font face="Verdana" style="font-size: 9pt">&nbsp;</font></p>
-		</center> 
 		<p align="justify" style="margin: 0 10px" dir="ltr">
 		<font face="Verdana" style="font-size: 9pt"><spring:message code="label.email"/>&nbsp; </font>
 		<a href="mailto:editorenglish@omannews.com">
@@ -227,20 +222,20 @@
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.phone"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.phone"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3"><spring:message code="label.DhoferGovenoratePhno"/>
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt"><spring:message code="label.DhoferGovenoratePhno"/>
 				</font></span></td>
 			</tr>
 			<tr>
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.fax"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.fax"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3">
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt">
 				<spring:message code="label.DhoferGovenorateFax"/></font></span></td>
 			</tr>
 		</table>
@@ -259,19 +254,19 @@
 							
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.phone"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.phone"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font size="3"><spring:message code="label.DirectorOfCorespondentsDepartmentPhno"/></font></span></td>
+				<span lang="ar-om"><font style="font-size: 9pt"><spring:message code="label.DirectorOfCorespondentsDepartmentPhno"/></font></span></td>
 			</tr>
 			<tr>
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.fax"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.fax"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font size="3"><spring:message code="label.DirectorOfCorespondentsDepartmentFaxno"/></font></span></td>
+				<span lang="ar-om"><font style="font-size: 9pt"><spring:message code="label.DirectorOfCorespondentsDepartmentFaxno"/></font></span></td>
 			</tr>
 		</table>
 		<p align="justify" style="margin: 0 10px" dir="ltr">
@@ -280,11 +275,11 @@
 		<font face="Verdana" style="font-size: 9pt"><spring:message code="label.email"/>&nbsp;</font><font face="Verdana" size="2"><b>
 		<a href="mailto:newsfeed@omannews.gov.om"><spring:message code="label.newsfeedId"/></a><br>
 		<br>
-		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</span><a href="mailto:editorarabic@omannews.gov.com">
 		<spring:message code="label.aditorarbicID"/></a><br>
 		<br>
-		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</span><a href="mailto:onaarabic@hotmail.com"><spring:message code="label.omanarbicID"/></a></b></font></p>
 		<hr align="left" color="#ff6600">
 		<p align="justify" style="margin: 0 10px" dir="ltr">&nbsp;</p>
@@ -296,20 +291,20 @@
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.phone"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.phone"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3">
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt">
 				<spring:message code="label.ItDepartmentPhno"/></font></span></td>
 			</tr>
 			<tr>
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.fax"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.fax"/></font></td>
 				<td width="73%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<span lang="ar-om"><font face="Verdana" size="3">
+				<span lang="ar-om"><font face="Verdana" style="font-size: 9pt">
 				<spring:message code="label.ItDepartmentFax"/></font></span></td>
 			</tr>
 		</table>
@@ -320,10 +315,7 @@
 		</span> </font><b>
 		<font face="Verdana" size="2">
 		<a href="mailto:editorarabic@omannews.gov.com">
-		<spring:message code="label.aditorarbicID"/></a></font></b><font face="Verdana" style="font-size: 9pt"><br>
-		<br>
-		<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		</span> </font></p>
+		<spring:message code="label.aditorarbicID"/></a></font></b></p>
 		<hr align="left" color="#ff6600">
 		<p align="justify" style="margin: 0 10px" dir="ltr"><b>
 		<font face="Verdana" style="font-size: 9pt">&nbsp;</font></b></p>
@@ -339,19 +331,19 @@
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.phone"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.phone"/></font></td>
 				<td width="72%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.InternetDeptPhno"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.InternetDeptPhno"/></font></td>
 			</tr>
 			<tr>
 				
 				<td width="14%" dir="ltr">
 				<p align="justify" style="margin: 0 10px" dir="ltr">
-				<font face="Verdana" size="3"><spring:message code="label.fax"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.fax"/></font></td>
 				<td width="72%" dir="ltr">
 				<p style="margin: 0 10px" dir="ltr" align="justify">
-				<font face="Verdana" size="3"><spring:message code="label.InternetDeptFax"/></font></td>
+				<font face="Verdana" style="font-size: 9pt"><spring:message code="label.InternetDeptFax"/></font></td>
 			</tr>
 		</table>
 		
@@ -360,17 +352,17 @@
 		<font face="Verdana" style="font-size: 9pt">&nbsp;</font></p>
 		
 		<p style="margin: 0 10px" dir="ltr" align="justify">
-		<font face="Verdana" style="font-size: 9pt"><spring:message code="label.email"/>:&nbsp; </font>
+		<font face="Verdana" style="font-size: 9pt"><spring:message code="label.email"/>&nbsp; </font>
 		<b>
 		<font face="Verdana" size="2">&nbsp;</font><a href="mailto:newsfeed@omannews.gov.om"><font size="2"><spring:message code="label.newsfeedId"/></font></a><font size="2"><br>
 		<br>
-		<span lang="ar-om">&nbsp; </span>&nbsp; <span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span lang="ar-om">&nbsp; </span>&nbsp; <span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</span><a href="mailto:editorarabic@omannews.gov.com">
 		<spring:message code="label.aditorarbicID"/></a><br>
 		<br>
-		<span lang="ar-om">&nbsp;</span> <span lang="ar-om">&nbsp; </span>&nbsp;<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span lang="ar-om">&nbsp;</span> <span lang="ar-om">&nbsp; </span>&nbsp;<span lang="ar-om">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</span></font><a href="mailto:onaarabic@hotmail.com"><font size="2">
-		<spring:message code="label.email"/></font></a></b></p><center><hr align="left" color="#ff6600">
+		<spring:message code="label.omanarbicID"/></font></a></b></p><center><hr align="left" color="#ff6600">
 		<p style="margin: 0 10px" dir="ltr">&nbsp;</p>
 		<p style="margin: 0 10px" dir="ltr">&nbsp;</p>
 		</center>
@@ -381,7 +373,7 @@
 					<div style="border-style: solid; border-width: 1px; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px" align="left">
 						<p align="center" style="margin: 0 10px" dir="ltr">
 						<font face="Verdana" style="font-size: 9pt"><b><br>
-						<font color="#008080"><spring:message code="label.address"/></font></b></font></p>
+						<font color="#008080"><spring:message code="label.contactUsAdd"/></font></b></font></p>
 					  </div>
 					</td>
 				</tr>

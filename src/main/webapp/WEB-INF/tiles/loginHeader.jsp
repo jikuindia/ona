@@ -17,11 +17,11 @@
 
 <div class="header">
 <div class="logo float_left"></div>
-<div class="Search float_right">
+<!-- <div class="Search float_right">
 <input name="" type="text" class="searchInput" value='search here...' onFocus="if(this.value=='search here...'){this.value='';}" onBlur="if(this.value==''){this.value='search here...';}" />
 <input type="submit" id="search_input_submit" value="" />
  
-</div>
+</div> -->
 <!--Header End-->
 <div class="clear_fix"></div>
 </div>

@@ -5,14 +5,12 @@
 <html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<!-- <script language="javascript" type="text/javascript" src="js/datetimepicker.js"> -->
 <link rel="stylesheet" href="css/themes/base/jquery.ui.all.css" />
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <link rel="stylesheet" type="text/css" media="all" href="css/style.css"></link>
 <script type="text/javascript" src="js/jquery.ui.core.js"></script>
-<script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+<script src="jquery/ui/jquery.ui.datepicker.js"></script>
 
-</script>
 <meta http-equiv="Content-Type" content="text/html; charset=cp1256">
 <title>ADD News</title>
 <script language="javascript" type="text/javascript" src="Editor/jscripts/tiny_mce/tiny_mce.js"></script>
@@ -51,6 +49,9 @@
 		win.document.forms[0].elements[field_name].value = "blank.jsp";
 	}
 </script>
+ <script type="text/javascript">
+var jQuery_1_9_1 = $.noConflict(true);
+</script> 
 <!-- /TinyMCE -->
 
 
@@ -226,27 +227,17 @@ function remove(space)
 	return(plus);
 }
 
-$(function() {
-	$( "#date" ).datepicker({
+jQuery_1_9_1(function() {
+	jQuery_1_9_1( "#date" ).datepicker({
 		showOn: "button",
 		buttonImage: "images/calendar.gif",
 		buttonImageOnly: true,
 		 dateFormat: "dd/mm/yy",
 		 onClose: function( selectedDate ) {
-				$( "#fromdate" ).datepicker( "option", "maxDate", selectedDate );
-			}
-	});
-	$( "#fromdate" ).datepicker({
-		showOn: "button",
-		buttonImage: "images/calendar.gif",
-		buttonImageOnly: true,
-		 dateFormat: "dd/mm/yy",
-			onClose: function( selectedDate ) {
-				$( "#todate" ).datepicker( "option", "minDate", selectedDate );
+			 jQuery_1_9_1( "#date" ).datepicker( "option", "maxDate", selectedDate );
 			}
 	});
 });
-
 </script>
 
 </head>
@@ -282,7 +273,7 @@ $(function() {
 	</tr>
 	<tr>
 		<td width="11%"><font face="Verdana" size="1"><b>News date</b></font></td>
-		<td><input id="demo3" name="date" type="text" size="20" id="date"><a href="javascript:NewCal('demo3','ddmmmyyyy',true,24)"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a></td>
+		<td><input name="date" type="text" id="date"></td>
 	</tr>
 	<tr>
 		<td width="11%"><b><font face="Verdana" size="1">Title</font></b></td>

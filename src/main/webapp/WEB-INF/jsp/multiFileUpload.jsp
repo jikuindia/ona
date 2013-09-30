@@ -8,7 +8,6 @@ pageEncoding="ISO-8859-1"%>
 function fileValidate(){
 	  valid = true;
 	  var pict=document.form1.picture.options[document.form1.picture.selectedIndex].value
-alert("hi");
 if ( document.form1.files.value == "" )
 {
     alert ( "please select picture." );
@@ -19,7 +18,6 @@ else if(pict=="0" )
 	 alert ( "please select folder." );
 	    valid = false;
 }
-alert("bye")
 return valid; 	
 }
 
@@ -52,12 +50,9 @@ return valid;
             try {
             var table = document.getElementById(tableID);
             var rowCount = table.rows.length;
- 			alert(rowCount);
             for(var i=0; i<rowCount; i++) {
                 var row = table.rows[i];
                 var ckbox = document.form1.chk;
-                alert(ckbox[i]);
-                alert(rowCount);
                 if(ckbox[i].checked) {
                     table.deleteRow(i);
                     rowCount--;

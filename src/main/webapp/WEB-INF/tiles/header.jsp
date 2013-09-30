@@ -33,7 +33,7 @@
  {
 	 jQuery_1_9_1( "#subscribemodal" ).dialog({
  	   		autoOpen: true,
- 	   		height: 300,
+ 	   		height: 350,
  	   		width: 985,
  	   		modal: true,
  			
@@ -42,19 +42,28 @@
  			}
  	   	});
  }
- 	   
+
+function cencelsubscribe(){
+		 document.getElementById('emessage').innerHTML="";
+		 document.getElementById('nmessage').innerHTML="";
+		// document.getElementById('phmessage').innerHTML="";
+		// document.getElementById('addmessage').innerHTML="";
+		 document.getElementById('subtypemessage').innerHTML="";	 
+	 document.getElementById('message1').innerHTML="";
+
+}   
 	
   var validemail =/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
  function subscribeMail(subName,phone,email,address,subtype) {
 	
 	 if(subName==""){
 		 document.getElementById('emessage').innerHTML="";
-		 document.getElementById('nmessage').innerHTML="Please Enter Name!";
-		 document.getElementById('phmessage').innerHTML="";
-		 document.getElementById('addmessage').innerHTML="";
+		 document.getElementById('nmessage').innerHTML="Please Enter Name.!";
+		// document.getElementById('phmessage').innerHTML="";
+		// document.getElementById('addmessage').innerHTML="";
 		 document.getElementById('subtypemessage').innerHTML="";
 		 document.getElementById('message1').innerHTML="";
-	 }else if(phone==""){
+	/*  }else if(phone==""){
 		 document.getElementById('emessage').innerHTML="";
 		 document.getElementById('nmessage').innerHTML="";
 		 document.getElementById('phmessage').innerHTML="Please Enter Phone No!";
@@ -67,35 +76,35 @@
 		 document.getElementById('phmessage').innerHTML="Enter Valid Number!";
 		 document.getElementById('addmessage').innerHTML="";
 		 document.getElementById('subtypemessage').innerHTML="";
-		 document.getElementById('message1').innerHTML="";
+		 document.getElementById('message1').innerHTML=""; */
 		 
 		 }else if(email==""){
-		 document.getElementById('emessage').innerHTML="Please Enter EmailId!";
+		 document.getElementById('emessage').innerHTML="Please Enter Email Id !";
 		 document.getElementById('nmessage').innerHTML="";
-		 document.getElementById('phmessage').innerHTML="";
-		 document.getElementById('addmessage').innerHTML="";
+		 //document.getElementById('phmessage').innerHTML="";
+		// document.getElementById('addmessage').innerHTML="";
 		 document.getElementById('subtypemessage').innerHTML="";
 		 document.getElementById('message1').innerHTML="";
 		 }else if(!(validemail.test(email))){
-			 document.getElementById('emessage').innerHTML=" Enter Valid EmailId!";
+			 document.getElementById('emessage').innerHTML=" Please Enter Valid Email Id !";
 			 document.getElementById('nmessage').innerHTML="";
-			 document.getElementById('phmessage').innerHTML="";
-			 document.getElementById('addmessage').innerHTML=""; 
+			// document.getElementById('phmessage').innerHTML="";
+			// document.getElementById('addmessage').innerHTML=""; 
 			 document.getElementById('subtypemessage').innerHTML="";
 			 document.getElementById('message1').innerHTML="";
-	 }else if(address==""){
+	 /* }else if(address==""){
 		 document.getElementById('emessage').innerHTML="";
 		 document.getElementById('nmessage').innerHTML="";
 		 document.getElementById('phmessage').innerHTML="";
 		 document.getElementById('addmessage').innerHTML="Please Enter Address!";
 		 document.getElementById('subtypemessage').innerHTML="";
-		 document.getElementById('message1').innerHTML="";
+		 document.getElementById('message1').innerHTML=""; */
 	 }else if(subtype=="0"){
 		 document.getElementById('emessage').innerHTML="";
 		 document.getElementById('nmessage').innerHTML="";
-		 document.getElementById('phmessage').innerHTML="";
-		 document.getElementById('addmessage').innerHTML="";
-		 document.getElementById('subtypemessage').innerHTML="Select Monthly or Weekly!";
+		// document.getElementById('phmessage').innerHTML="";
+		// document.getElementById('addmessage').innerHTML="";
+		 document.getElementById('subtypemessage').innerHTML="Please Select Monthly or Weekly !";
 		 document.getElementById('message1').innerHTML="";
 		 
 		 }else{
@@ -103,8 +112,8 @@
 	 dwrService.getSubscribe(subName,phone,email,address,subtype,function(message){
 		 document.getElementById('emessage').innerHTML="";
 		 document.getElementById('nmessage').innerHTML="";
-		 document.getElementById('phmessage').innerHTML="";
-		 document.getElementById('addmessage').innerHTML="";
+		// document.getElementById('phmessage').innerHTML="";
+		// document.getElementById('addmessage').innerHTML="";
 		 document.getElementById('subtypemessage').innerHTML="";	 
 	 document.getElementById('message1').innerHTML=message;
 
@@ -144,7 +153,10 @@
 
 <table class="fontformodalcontrol" width="100%" align="center" border="0">
 
-
+<%-- <tr class="substyle"><td class="substyle" valign="middle" width="60" align="left"></td>
+<td class="substyle" valign="middle" align="right">&nbsp;<spring:message
+					code="label.subscribenews" /></td>
+</tr> --%>
 <tr><td></td ><td></td></tr>
 <tr>
  <td>&nbsp;</td>
@@ -152,8 +164,9 @@
 <label for="name"><b><spring:message code="label.name"/></b></label></td>
 <td>&nbsp;</td>
 <td>
-<input type="text" name="subName" id="subName" size="40"/>&nbsp;</td>
-<td align="right"><div id=nmessage class="text"></div></td>
+<input type="text" name="subName" id="subName" size="40"/>&nbsp;</td></tr>
+<tr><td></td><td></td><td></td>
+ <td align="right"><div id=nmessage class="text"></div></td>
 </tr>
 <tr>
 <td>&nbsp;</td>
@@ -162,9 +175,10 @@
 <td>&nbsp;</td>
 <td>
 <input type="text" name="phone" id="phone" size="40"/>&nbsp;</td>
- <td align="right"><div id=phmessage class="text"></div></td> 
 </tr>
-
+<tr><td></td><td></td><td></td>
+ <td align="right"><div id=pmessage class="text"></div></td>
+</tr>
 <tr>
  <td>&nbsp;</td>
 <td align="right" valign="bottom">
@@ -172,7 +186,9 @@
 <td>&nbsp;</td>
 <td>
 <input type="text" name="email" id="email" size="40"/>&nbsp;</td>
-<td align="right"><div id=emessage class="text"></div></td>
+</tr>
+<tr><td></td><td></td><td></td>
+ <td align="right"><div id=emessage class="text"></div></td>
 </tr>
 
 <tr>
@@ -182,24 +198,28 @@
 <td>&nbsp;</td>
 <td>
 <input type="text" name="address" id="address" size="40"/>&nbsp;</td>
-<td align="right"><div id=addmessage class="text"></div></td>
+</tr>
+<tr><td></td><td></td><td></td>
+ <td align="right"><div id=addmessage class="text"></div></td>
 </tr>
 <tr><td>&nbsp;</td>
 		<td align="right" valign="bottom"><label for="subtype"><b><spring:message code="label.subtype"/></b></label></td>
 		<td>&nbsp;</td>
-		<td><select size="1" name="subtype">
+		<td><select size="1" name="subtype" id="subtype">
 		<option selected value="0">Choose...</option>
 		<option value="M">Monthly</option>
 		<option value="W">Weekly</option>
 		</select>&nbsp;</td>
-		<td align="right"><div id=subtypemessage class="text"></div></td> 
     </tr>
+    <tr><td></td><td></td><td></td>
+ <td align="right"><div id=subtypemessage class="text"></div></td>
+</tr> 
 
 <tr>
 
 <td colspan="4" align="center">
 <input type="button" name="loginbtn" id="loginbtn" class="flatbtn-blu " value="<spring:message code="label.submit"/>" onclick="subscribeMail(subName.value,phone.value,email.value,address.value,subtype.value)" tabindex="3" />
-<input type="reset" name="loginbtn2" id="loginbtn2" class="flatbtn-blu hidemodal" value="<spring:message code="label.cancel"/>" tabindex="3" />
+<input type="reset" name="loginbtn2" id="loginbtn2" class="flatbtn-blu hidemodal"  onClick="cencelsubscribe()" value="<spring:message code="label.cancel"/>" tabindex="3" />
 </td>
 
 </tr>
