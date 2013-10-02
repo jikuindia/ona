@@ -8,6 +8,13 @@ public class IftharCommand {
 	private String prayer3;
 	private String prayer4;
 	private String prayer5;
+	private String prayer6;
+	public String getPrayer6() {
+		return prayer6;
+	}
+	public void setPrayer6(String prayer6) {
+		this.prayer6 = prayer6;
+	}
 	private Date date;
 	public String getPrayer1() {
 		return prayer1;

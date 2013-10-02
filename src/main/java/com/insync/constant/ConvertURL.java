@@ -9,6 +9,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.insync.model.IftharCommand;
+
 public class ConvertURL {
 	
 	public static void main(String[] args) {
@@ -72,4 +74,31 @@ public class ConvertURL {
 				
 	    return currencyDataList;
 	  }
+		public static IftharCommand getPrayerData() throws Exception {
+			IftharCommand prayerTime=new IftharCommand();
+			
+			Document doc = Jsoup.connect("http://www.awqafoman.net/calendar/calendar1.asp").get();
+		        Element table=doc.getElementById("table2");
+			    Elements trs=table.getElementsByTag("tr");
+			    Element tr=trs.get(4);
+			 	String date=tr.child(0).text();
+			 	
+			           	String prayer1=tr.child(1).text();
+			      	String prayer2=tr.child(2).text();
+			      	String prayer3=tr.child(3).text();
+			      	String prayer4=tr.child(4).text();
+			     	String prayer5=tr.child(5).text();
+			     	String prayer6=tr.child(6).text();
+			     	
+			     	prayerTime.setPrayer1(prayer1);
+			     	prayerTime.setPrayer2(prayer2);
+			     	prayerTime.setPrayer3(prayer3);
+			     	prayerTime.setPrayer4(prayer4);
+			     	prayerTime.setPrayer5(prayer5);
+			     	prayerTime.setPrayer6(prayer6);
+			     	
+				    System.out.println(prayer1);
+					   
+		    return prayerTime;
+		  }
 	}

@@ -62,12 +62,12 @@
   <script type="text/javascript">
   var jQuery_1_9_1 = $.noConflict(true);
 	
-  jQuery_1_9_1(document).ready(function () {
+//   jQuery_1_9_1(document).ready(function () {
 	
-	  jQuery_1_9_1('#test').weatherfeed(['MUXX0003']);
+// 	  jQuery_1_9_1('#test').weatherfeed(['MUXX0003']);
    
 	
-});
+// });
 function openModal()
 {
 	 jQuery_1_9_1( "#dialog-form" ).dialog({
@@ -548,13 +548,19 @@ function openModal()
 <div class="float_left priceBlock">
 <div>
 <div class="float_left headerLeft2"></div>
-<div class="float_left headerbg2"><div class="headerText">Weather Forecast</div></div>
+<div class="float_left headerbg2"><div class="headerText"><table border="0" width="100%"><tr><td>Weather Forecast</td><td align="right"><a  class="headerText" href="http://met.gov.om/eng/" target="_blank">Full Forcast</a></td></tr></table>
+
+</div>
+
+</div>
 <div class="float_left headerRight2"></div>
 </div>
 <div class="clear_fix"></div>
 <div style="margin-top:2px; padding-left:2px" >
 <!-- <img src="images/weather.png" width="286" /> --></div>
 <div id="test" style="margin-left: 5px;margin-top: 7px"></div>
+<iframe width="289" height="289" src="http://met.gov.om/eng/" frameborder="0" allowfullscreen></iframe>
+
 </div>
 <!--subBlock-2 end-->
 <div class="clear_fix"></div>
@@ -613,10 +619,13 @@ function openModal()
 
 <div class="float_left">
 <div class="UrlName11"><spring:message code="label.fajr"/> ${prayercommand.prayer1}</div>
-<div class="UrlName11"><spring:message code="label.Dhuhr"/> ${prayercommand.prayer2}</div>
-<div class="UrlName11"><spring:message code="label.asr"/> ${prayercommand.prayer3}</div>
-<div class="UrlName11"><spring:message code="label.maghrib"/> ${prayercommand.prayer4}</div>
-<div class="UrlName11"><spring:message code="label.isha"/> ${prayercommand.prayer5}</div>
+<div class="UrlName11">Sunrise ${prayercommand.prayer2}</div>
+
+<div class="UrlName11"><spring:message code="label.Dhuhr"/> ${prayercommand.prayer3}</div>
+<div class="UrlName11"><spring:message code="label.asr"/> ${prayercommand.prayer4}</div>
+<div class="UrlName11"><spring:message code="label.maghrib"/> ${prayercommand.prayer5}</div>
+<div class="UrlName11"><spring:message code="label.isha"/> ${prayercommand.prayer6}</div>
+
 
 
 </div>

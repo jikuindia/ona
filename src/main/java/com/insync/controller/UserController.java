@@ -50,7 +50,13 @@ public class UserController {
 		 map.addAttribute("currencyDataString", currencyDataString);
 			
 		//for prayer data
-		 IftharCommand prayerTime=adminEditService.getPrayerTime();
+		 IftharCommand prayerTime=null;
+		try {
+			prayerTime = ConvertURL.getPrayerData();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		  map.addAttribute("prayercommand", prayerTime);
 		  //getting image for image panel
 			List<String> imageFile=adminEditService.getImages();
