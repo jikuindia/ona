@@ -628,7 +628,8 @@ function openModal()
 <div class="float_left inpUrl">
 <div>
 <div class="float_left headerLeft"></div>
-<div class="float_left headerbg1"><div class="headerText">Currency Rates</div></div>
+<div class="float_left headerbg1"><div class="headerText"><table border="0" width="100%"><tr><td>Currency Rates</td><td align="right"><a  class="headerText" href="http://www.cbo-oman.org/fixrates.html?number=1000" target="_blank">Full List</a></td></tr></table>
+</div> </div>
 <div class="float_left headerRight"></div>
 </div>
 <div style="height:15px;"></div>

@@ -38,7 +38,7 @@ public class ConvertURL {
 		    	 for (Element td : tds)
 		    	 {
 		    		 
-		    		 Elements countryElement=td.getElementsByIndexEquals(1);
+		    		 Elements countryElement=td.getElementsByIndexEquals(0);
 		    		 String countryString=countryElement.text().trim();
 		    		 
 		    		 Elements buyElement=td.getElementsByIndexEquals(2);
@@ -47,8 +47,7 @@ public class ConvertURL {
 		    		 Elements sellElement=td.getElementsByIndexEquals(3);
 		    		 String sellString=sellElement.text().trim();
 		    		 System.out.println(countryString.length());
-		    		 
-		    		 if(td.getElementsByIndexEquals(0).text().equals("USD")||td.getElementsByIndexEquals(0).text().equals("SAR") ||td.getElementsByIndexEquals(0).text().equals("QAR")||td.getElementsByIndexEquals(0).text().equals("KWD"))
+		    		 if(countryString.equals("USD") || countryString.equals("SAR") || countryString.equals("AED") || countryString.equals("EUR") || countryString.equals("CNY") || countryString.equals("INR"))
 		    		 {
 		    		 if(countryString.length()>1) 
 		    		 countryList.append("'").append(countryString).append("',");
